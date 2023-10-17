@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Restart SSH service
+sudo service ssh restart
+
+# Restart SSH using systemctl
+sudo systemctl restart ssh

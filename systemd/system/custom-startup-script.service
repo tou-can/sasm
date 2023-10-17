@@ -1,0 +1,12 @@
+[Unit]
+Description=Custom Startup Script
+
+[Service]
+ExecStart=/path/to/your/script.sh
+Type=oneshot
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+
+
