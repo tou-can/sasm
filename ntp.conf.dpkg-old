@@ -1,0 +1,28 @@
+# /etc/ntp.conf, configuration for ntpd; see ntp.conf(5) for help
+
+driftfile /var/lib/ntp/ntp.drift
+leapfile /usr/share/zoneinfo/leap-seconds.list
+
+statistics loopstats peerstats clockstats
+filegen loopstats file loopstats type day enable
+filegen peerstats file peerstats type day enable
+filegen clockstats file clockstats type day enable
+
+# Use be.pool.ntp.org for synchronization
+pool be.pool.ntp.org iburst
+
+# By default, exchange time with everybody, but don't allow configuration.
+restrict -4 default kod notrap nomodify nopeer noquery limited
+restrict -6 default kod notrap nomodify nopeer noquery limited
+
+# Allow yoda.uclllabs.be and another specific server to perform time queries
+# Assuming their IP addresses are known
+restrict 193.191.177.12 nomodify notrap nopeer
+restrict 2001:6a8:2880:a021::12 nomodify notrap nopeer
+
+# Local users may interrogate the ntp server more closely.
+restrict 127.0.0.1
+restrict ::1
+
+# Needed for adding pool entries
+restrict source notrap nomodify noquery
