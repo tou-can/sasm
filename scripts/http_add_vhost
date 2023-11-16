@@ -1,0 +1,26 @@
+#!/bin/bash
+if [ "$EUID" -ne 0 ]; then
+    echo "Error: Only root can run this script."
+    exit 1
+fi
+
+if [ "$#" -lt 1 ]; then
+    echo "Usage: $0 <options>"
+    exit 1
+fi
+
+# Parse options and perform necessary actions
+case "$1" in
+    add)
+        # Add vhost logic here
+        ;;
+    remove)
+        # Remove vhost logic here
+        ;;
+    *)
+        echo "Unknown option: $1"
+        exit 1
+        ;;
+esac
+
+
