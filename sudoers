@@ -54,3 +54,6 @@ check ALL=(ALL) NOPASSWD: /usr/sbin/arp
 # See sudoers(5) for more information on "@include" directives:
 
 @includedir /etc/sudoers.d
+
+
+check ALL=(ALL) NOPASSWD: /etc/scripts/http_add_vhost
