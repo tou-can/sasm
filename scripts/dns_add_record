@@ -1,0 +1,45 @@
+#!/bin/bash
+if [ "$EUID" -ne 0 ]; then
+  echo "Error: This script must be run as root."
+  exit
+fi
+
+if [ "$#" -ne 4 ]; then
+  echo "Usage: $0 -t <record_type> <record_name> <record_value> <zone_name>"
+  exit
+fi
+
+while getopts ":t:" opt; do
+  case ${opt} in
+    t )
+      record_type="$OPTARG"
+      ;;
+    \? )
+      echo "Invalid option: -$OPTARG" 1>&2
+      exit 1
+      ;;
+    : )
+      echo "Option -$OPTARG requires an argument." 1>&2
+      exit 1
+      ;;
+  esac
+done
+shift $((OPTIND -1))
+
+record_name="$1"
+record_value="$2"
+zone_name="$3"
+zone_file="/etc/bind/zones/${zone_name}"
+
+# Check if the zone exists
+if [ ! -f "${zone_file}" ]; then
+  echo "Error: Zone '${zone_name}' does not exist."
+  exit
+fi
+
+# Add the record to the zone file
+echo "${record_name}       IN      ${record_type}      ${record_value}" | sudo tee -a "${zone_file}" > /dev/null
+
+# Notify the user
+echo "Record added successfully to zone '${zone_name}':"
+echo "${record_name}       IN      ${record_type}      ${record_value}"
