@@ -11,6 +11,7 @@ $TTL 604800
 @       IN      NS      ns2.uclllabs.be.
 @       IN      NS      ns.matts-verhaegen.sasm.uclllabs.be.
 
-ns.vic-menten.sasm.uclllabs.be.     IN      A       193.191.176.254
-www.vic-menten.sasm.uclllabs.be.    IN      A       193.191.176.254
-test.vic-menten.sasm.uclllabs.be.   IN      A       193.191.177.254
+ns.vic-menten.sasm.uclllabs.be.     IN      A       193.191.176.91
+www.vic-menten.sasm.uclllabs.be.    IN      A       193.191.176.91
+test.vic-menten.sasm.uclllabs.be.   IN      A       193.191.176.91
+# 193.191.177.254
