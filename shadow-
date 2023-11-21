@@ -29,3 +29,4 @@ tcpdump:*:19106:0:99999:7:::
 check:$y$j9T$rZXlkRWWDBGdg.vZaeG6U0$DnCaav9Oj0YY75rezbogtTrrcXu/OhxrogiCuEtWOb/:19628:0:99999:7:::
 ntp:*:19648:0:99999:7:::
 bind:*:19677:0:99999:7:::
+_chrony:*:19682:0:99999:7:::
