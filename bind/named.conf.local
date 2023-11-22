@@ -6,7 +6,7 @@
 // organization
 //include "/etc/bind/zones.rfc1918";
 
-zone "vic-menten.sasm.uclllabs.be" {
+zone "vic-menten.sb.uclllabs.be" {
     type master;
-    file "/etc/bind/zones/vic-menten.sasm.uclllabs.be";
+    file "/etc/bind/zones/vic-menten.sb.uclllabs.be";
 };
