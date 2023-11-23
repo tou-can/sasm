@@ -1,26 +1,49 @@
 #!/bin/bash
+
+# Check if the script is run as root
 if [ "$EUID" -ne 0 ]; then
-    echo "Error: Only root can run this script."
+    echo "This script must be run as root."
     exit 1
 fi
 
-if [ "$#" -lt 1 ]; then
-    echo "Usage: $0 <options>"
+# Check if correct number of arguments is provided
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 <domain>"
     exit 1
 fi
 
-# Parse options and perform necessary actions
-case "$1" in
-    add)
-        # Add vhost logic here
-        ;;
-    remove)
-        # Remove vhost logic here
-        ;;
-    *)
-        echo "Unknown option: $1"
-        exit 1
-        ;;
-esac
+# Set domain from command line argument
+domain="$1"
+document_root="/var/www/html/$domain"
+log_dir="/var/log/apache2/$domain"
 
+# Check if the domain already exists
+if [ -e "/etc/apache2/sites-available/$domain.conf" ]; then
+    echo "Error: Virtual host already exists for $domain."
+    exit 1
+fi
+
+# Create DocumentRoot directory
+mkdir -p "$document_root"
+echo "welcome $domain" > "$document_root/index.html"
+
+# Create Apache configuration file
+cat <<EOL > "/etc/apache2/sites-available/$domain.conf"
+<VirtualHost *:80>
+    ServerAdmin webmaster@localhost
+    ServerName $domain
+    DocumentRoot $document_root
+
+    ErrorLog $log_dir/error.log
+    CustomLog $log_dir/access.log combined
+</VirtualHost>
+EOL
+
+# Enable the virtual host
+a2ensite "$domain.conf"
+
+# Restart Apache
+systemctl restart apache2
+
+echo "Virtual host for $domain has been created successfully."
 

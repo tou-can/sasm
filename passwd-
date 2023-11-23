@@ -29,4 +29,7 @@ tcpdump:x:109:117::/nonexistent:/usr/sbin/nologin
 check:x:1000:1000::/home/check:/bin/sh
 ntp:x:110:119::/nonexistent:/usr/sbin/nologin
 bind:x:111:120::/var/cache/bind:/usr/sbin/nologin
-_chrony:x:112:121::/var/lib/chrony:/usr/sbin/nologin
+_chrony:x:112:121:Chrony daemon,,,:/var/lib/chrony:/usr/sbin/nologin
+dovecot:x:113:122:Dovecot mail server,,,:/usr/lib/dovecot:/usr/sbin/nologin
+dovenull:x:114:123:Dovecot login user,,,:/nonexistent:/usr/sbin/nologin
+mysql:x:115:124::/nonexistent:/bin/false
