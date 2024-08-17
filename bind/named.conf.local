@@ -8,7 +8,10 @@
 
 zone "vic-menten.sasm.uclllabs.be" {
     type master;
-    file "/etc/bind/zones/vic-menten.sasm.uclllabs.be";
-    allow-update {key "acme" ;};
-
+    file "/etc/bind/zones/db.vic-menten.sasm.uclllabs.be.signed";
+//    allow-update {key "acme" ;};
+    allow-transfer { any; };
+//    inline-signing yes;
+//    auto-dnssec maintain;
+//    serial-update-method increment;
 };

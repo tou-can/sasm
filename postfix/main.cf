@@ -1,19 +1,37 @@
-smtpd_relay_restrictions = permit_mynetworks permit_sasl_authenticated defer_unauth_destination
-myhostname = mx.neo-colebunders.uclllabs.be
-alias_maps = hash:/etc/aliases
-alias_database = hash:/etc/aliases
+smtpd_banner = $myhostname ESMTP $mail_name
+biff = no
+append_dot_mydomain = no
+readme_directory = no
+
+ # TLS parameters
+smtp_use_tls = yes
+smtp_tls_security_level = may
+smtp_tls_session_cache_database = btree:${data_directory}/smtp_scache
+
+smtpd_use_tls = yes
+smtpd_tls_security_level = may
+smtpd_tls_session_cache_database = btree:${data_directory}/smtpd_scache
+smtpd_tls_cert_file = /etc/letsencrypt/live/vic-menten.sasm.uclllabs.be/fullchain.pem
+smtpd_tls_key_file = /etc/letsencrypt/live/vic-menten.sasm.uclllabs.be/privkey.pem
+smtpd_relay_restrictions = permit_mynetworks, permit_sasl_authenticated,  reject_unauth_destination
+
+smtpd_sasl_auth_enable = yes
+smtpd_sasl_type = dovecot
+smtpd_sasl_path = private/auth
+
+virtual_transport = lmtp:unix:private/dovecot-lmtp
+virtual_mailbox_domains = /etc/postfix/virtual_mailbox_domains
+
+myhostname = mail.vic-menten.sasm.uclllabs.be
 myorigin = /etc/mailname
-mydestination = $myhostname, localhost.uclllabs.be, localhost
-relayhost=
+mydestination = localhost, localhost.localdomain
+relayhost = 
 mynetworks = 127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128
 mailbox_size_limit = 0
 recipient_delimiter = +
 inet_interfaces = all
 inet_protocols = all
- 
-virtual_mailbox_domains = neo-colebunders.sasm.uclllabs.be
-virtual_mailbox_base = /var/vmail
-virtual_mailbox_maps = hash:/etc/postfix/vmailbox
-virtual_minimum_uid = 1000
-virtual_uid_maps = static:5000
-virtual_gid_maps = static:5000
+alias_maps = hash:/etc/aliases
+alias_database = hash:/etc/aliases
+
+virtual_mailbox_maps = hash:/etc/postfix/virtual_mailbox_domains, hash:/etc/postfix/virtual_mailbox_maps

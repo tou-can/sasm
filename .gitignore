@@ -1,4 +1,6 @@
 yoda/
 /yoda
 yoda
+*.autoconf
+backuptest
 

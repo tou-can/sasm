@@ -18,7 +18,7 @@ if [ "$#" -ne 1 ]; then
 fi
 
 zone_name="$1"
-zone_file="/etc/bind/zones/${zone_name}"
+zone_file="/etc/bind/zones/db.${zone_name}"
 
 # Check if the zone already exists
 if [ -f "${zone_file}" ]; then
@@ -38,7 +38,7 @@ echo "\$TTL 604800
 @       IN      NS      ns.${zone_name}.
 @       IN      NS      ns1.uclllabs.be.
 @       IN      NS      ns2.uclllabs.be.
-@       IN      NS      ns.matts-verhaegen.sasm.uclllabs.be." | sudo tee "${zone_file}" > /dev/null
+@       IN      NS      ns.vic-menten.sasm.uclllabs.be." | sudo tee "${zone_file}" > /dev/null
 
 # Notify the user
 echo "Zone '${zone_name}' created successfully at '${zone_file}'."

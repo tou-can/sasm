@@ -1,0 +1,15 @@
+[Unit]
+Description=Vic Firewall
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c '/usr/sbin/iptables-restore < /etc/iptables/rules.v4'
+ExecStartPost=/bin/sh -c '/usr/sbin/ip6tables-restore < /etc/iptables/rules.v6'
+ExecStop=/bin/sh -c '/usr/sbin/iptables -F'
+ExecStopPost=/bin/sh -c '/usr/sbin/ip6tables -F'
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+

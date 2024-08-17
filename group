@@ -28,7 +28,7 @@ list:x:38:
 irc:x:39:
 src:x:40:
 gnats:x:41:
-shadow:x:42:
+shadow:x:42:freerad
 utmp:x:43:
 video:x:44:
 sasl:x:45:
@@ -40,7 +40,7 @@ nogroup:x:65534:
 crontab:x:101:
 messagebus:x:102:
 syslog:x:103:
-ssl-cert:x:104:
+ssl-cert:x:104:freerad
 input:x:105:
 sgx:x:106:
 kvm:x:107:
@@ -62,3 +62,10 @@ _chrony:x:121:
 dovecot:x:122:
 dovenull:x:123:
 mysql:x:124:
+vmail:x:5000:
+rtkit:x:125:
+mystery1_2014:x:1001:
+freerad:x:126:
+docker:x:127:root
+user1:x:1002:
+stunnel4:x:999:stunnel4

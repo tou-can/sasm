@@ -29,7 +29,7 @@ shift $((OPTIND -1))
 record_name="$1"
 record_value="$2"
 zone_name="$3"
-zone_file="/etc/bind/zones/${zone_name}"
+zone_file="/etc/bind/zones/db.${zone_name}"
 
 # Check if the zone exists
 if [ ! -f "${zone_file}" ]; then
