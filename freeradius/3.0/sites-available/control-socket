@@ -20,11 +20,6 @@
 #	$Id$
 #
 ######################################################################
-server control {
-     socket = $/var/run/freeradius/freeradius.sock
- }
-
-
 listen {
 	#
 	#  Listen on the control socket.
@@ -93,5 +88,5 @@ listen {
 	#	ro = read only access (default)
 	#	rw = read/write access.
 	#
-	mode = rw
+#	mode = rw
 }

@@ -57,6 +57,9 @@
 ### tuple ### deny tcp 143 ::/0 any ::/0 in
 -A ufw6-user-input -p tcp --dport 143 -j DROP
 
+### tuple ### allow tcp 53 ::/0 any ::/0 in
+-A ufw6-user-input -p tcp --dport 53 -j ACCEPT
+
 ### END RULES ###
 
 ### LOGGING ###

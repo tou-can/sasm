@@ -731,17 +731,6 @@ session {
 #  Once we KNOW that the user has been authenticated, there are
 #  additional steps we can take.
 post-auth {
-	if (User-Name == "check") {
-		update {
-			Control-Debug-Level := 2
-			Output-Debug-Level := 2
-		}
-	# Log debug info to a specific file (optional)
-	exec {
-		program = "/bin/logger -t radiusd --user %u"
-		input_pairs = request
-		}
-	} 
 	#
 	#  If you need to have a State attribute, you can
 	#  add it here.  e.g. for later CoA-Request with

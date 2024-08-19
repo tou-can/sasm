@@ -18,5 +18,5 @@ userdb {
   # Override fields from passwd-file
   #override_fields = home=/home/virtual/%u
 }
-mail_uid = 5000
-mail_gid = 5000
+# mail_uid = 5000
+# mail_gid = 5000

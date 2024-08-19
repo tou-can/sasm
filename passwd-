@@ -36,6 +36,8 @@ mysql:x:115:124:MySQL Server,,,:/nonexistent:/bin/false
 vmail:x:5000:5000:virtual mail user:/var/mail/vhosts:/bin/sh
 rtkit:x:116:125:RealtimeKit,,,:/proc:/usr/sbin/nologin
 mystery1_2014:x:1001:1001:mystery1_2014,,,:/home/mystery1_2014:/bin/bash
-freerad:x:117:126::/etc/freeradius:/usr/sbin/nologin
 dnsmasq:x:118:65534:dnsmasq,,,:/var/lib/misc:/usr/sbin/nologin
 user1:x:1002:1002:user1,1,1,1,1:/home/user1:/bin/bash
+stunnel4:x:999:999:stunnel service system account:/var/run/stunnel4:/usr/sbin/nologin
+freerad:x:117:126::/etc/freeradius:/usr/sbin/nologin
+ftp:x:119:128::/srv/ftp:/usr/sbin/nologin

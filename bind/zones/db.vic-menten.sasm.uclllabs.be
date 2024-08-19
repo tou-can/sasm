@@ -1,6 +1,6 @@
 $TTL    86400
 @        IN      SOA     ns.vic-menten.sasm.uclllabs.be. admin.vic-menten.sasm.uclllabs.be. (
-                        2153111742      ; Serial
+                        2153111743      ; Serial
                         604800          ; Refresh
                         86400           ; Retry
                         2419200         ; Expire
@@ -20,6 +20,10 @@ www2     IN      A       193.191.176.91
 tweakers IN      A       193.191.176.91
 secure   IN      A       193.191.176.91
 supersecure IN  A       193.191.176.91
+
+vic-menten IN AAAA 2a02:1807:4300:3e00:9ce9:d1c8:4dca:2cde
+ns.vic-menten IN AAAA 2a02:1807:4300:3e00:9ce9:d1c8:4dca:2cde
+
 
 alias   IN  CNAME  www.vic-menten.sasm.uclllabs.be.
 

@@ -1,4 +1,6 @@
-admin@vic-menten.sasm.uclllabs.be:{plain}EXAMPLE_PASSWORD
-info@vic-menten.sasm.uclllabs.be:{plain}EXAMPLE_PASSWORD
-billing@vic-menten.sasm.uclllabs.be:{plain}EXAMPLE_PASSWORD
+admin@vic-menten.sasm.uclllabs.be:{plain}password123
+info@vic-menten.sasm.uclllabs.be:{plain}password123
+billing@vic-menten.sasm.uclllabs.be:{plain}password123
 user1@vic-menten.sasm.uclllabs.be:{PLAIN}password123
+user2@vic-menten.sasm.uclllabs.be:{PLAIN}password123
+check@vic-menten.sasm.uclllabs.be:{PLAIN}password3

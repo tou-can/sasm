@@ -1,24 +1,19 @@
 *filter
 
-# all traffic originating your machine must be allowed
 -A OUTPUT -j ACCEPT
 
-# permit tcp ports 25,80,443,587,993,22345 from everywhere
 -A INPUT -p tcp -m multiport --dports 25,80,443,587,993,22345 -j ACCEPT
 
-# permit udp/tcp ports 53 from everywhere
 -A INPUT -p tcp --dport 53 -j ACCEPT
+
 -A INPUT -p udp --dport 53 -j ACCEPT
 
-# Any host should be able to ping your machine over IPv4 and IPv6
 -A INPUT -p icmp -j ACCEPT
 
-# yoda leia
-# permit everything from yoda and leia
 -A INPUT -s 2001:6a8:2880:a021::12 -j ACCEPT
+
 -A INPUT -s 2001:6a8:2880:a021::1 -j ACCEPT
 
-# drop all other traffic
 -A INPUT -j DROP
 
 COMMIT

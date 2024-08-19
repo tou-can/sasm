@@ -1,4 +1,5 @@
+auto eth0
 iface eth0 inet6 static
-    address 2a02:1811:d1a:8000:283a:85a4:a8a:93b8
+    address 2001:6a8:2880:a020::5B
     netmask 64
     gateway 2001:6a8:2880:a020::fe
