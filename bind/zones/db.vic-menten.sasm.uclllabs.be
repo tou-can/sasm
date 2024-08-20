@@ -1,6 +1,6 @@
 $TTL    86400
 @        IN      SOA     ns.vic-menten.sasm.uclllabs.be. admin.vic-menten.sasm.uclllabs.be. (
-                        2153111745      ; Serial
+                        2153111749      ; Serial
                         604800          ; Refresh
                         86400           ; Retry
                         2419200         ; Expire
@@ -46,3 +46,16 @@ _acme-challenge.vic-menten.sasm.uclllabs.be. IN TXT "u0UL7bCeJZ_Z-nadJuppeBdsBpK
 vic-menten.sasm.uclllabs.be. IN DNSKEY 256 3 8 AwEAAa5N8s7HkAi14uPbd/6UJz7AafANzkLbwh2tT2ZGGbx2lYKWbcjd UrhmLvllUDlRNbz4p6AKMLHKr5qdhsSsvabINlRptO61rOe7xNPwLcac CRUmCzhNH/JvErx9cUGDHEKTfOx/Wxu6goRtkQIALCNsymPQ7smMGAFZ 4JgsaoIT4vjxcNJJk9S1DCZPhzQ6XFRRJcekNl8aLqYMTjh2NP5xVEjG EVhQPTk59n2HfR6QEVYpQid1C2mdLDb/4LUPYanF/sx7YYKu7zdE73WT qcAS4SKAI9P+wIQt1gvjbt7JiN7oENz4xFuCHGmIyODw10F+H6yklKSt hvRy24InJK0=
 
 vic-menten.sasm.uclllabs.be. IN DNSKEY 257 3 8 AwEAAc9NgwbvTxY2naiNRa6BgSiex9xZtXTez6EG/sY32fGX6oM6HLTv m/GMLb/JPV6ctxTrmuMmuwRoPe1vpWBqfA85DIfx21p8N8nEv7WYlHPK bZ4HY+Nflk4dHKuccW+VWNA2r8CpCG4M3DDWIj6efX42qHVfar6STrE+ 9/xkij7zqIvbp83p5Vv4tcx8P0REKDOTffHy8r0tc8Hbdmuf0ZcQcGCA I/Olx6YoKPoMXpqIyWrW/AIuH25+iVAdt9KKHDfr11KuIeStAygWpK9S xYqgdUS9CeTYdD7V0z7J2IfkHRd+wZjsujkQBqll4jY+Zskv5Jxu9I/p Iq13qCexFC8=
+subzoneeng8mo        IN      NS      ns.vic-menten.sasm.uclllabs.be.
+ns.subzoneeng8mo   IN      A       193.191.176.91
+
+
+subzonehaex2l        IN      NS      ns.vic-menten.sasm.uclllabs.be.
+ns.subzonehaex2l   IN      A       193.191.176.91
+
+subzoneeyar6b        IN      NS      ns.vic-menten.sasm.uclllabs.be.
+ns.subzoneeyar6b   IN      A       193.191.176.91
+
+subzonemu3igh        IN      NS      ns.vic-menten.sasm.uclllabs.be.
+ns.subzonemu3igh   IN      A       193.191.176.91
+
