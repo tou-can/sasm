@@ -15,3 +15,4 @@ zone "vic-menten.sasm.uclllabs.be" {
 //    auto-dnssec maintain;
 //    serial-update-method increment;
 };
+include "/etc/bind/named.conf.yoda-zones";

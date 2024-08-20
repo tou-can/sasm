@@ -1,6 +1,6 @@
 $TTL    86400
 @        IN      SOA     ns.vic-menten.sasm.uclllabs.be. admin.vic-menten.sasm.uclllabs.be. (
-                        2153111743      ; Serial
+                        2153111745      ; Serial
                         604800          ; Refresh
                         86400           ; Retry
                         2419200         ; Expire
@@ -40,15 +40,9 @@ ns       IN      AAAA    2001:6a8:2880:a020::5B
 _acme-challenge.secure.vic-menten.sasm.uclllabs.be. IN TXT "7g6CsffWDYO_ndk36rry4ML1S21jWsgGv0KnRcmJRg4"
 _acme-challenge.supersecure.vic-menten.sasm.uclllabs.be. IN TXT "ZDPBTIdLDtsr_V5GiNqSro5SD1HWUrFOjDsZ_dJqzkI"
 _acme-challenge.vic-menten.sasm.uclllabs.be. IN TXT "u0UL7bCeJZ_Z-nadJuppeBdsBpKq81PnLIKl1VAIZEY"
-; This is a key-signing key, keyid 12812, for vic-menten.sasm.uclllabs.be.
-; Created: 20240816093632 (Fri Aug 16 11:36:32 2024)
-; Publish: 20240816093632 (Fri Aug 16 11:36:32 2024)
-; Activate: 20240816093632 (Fri Aug 16 11:36:32 2024)
-vic-menten.sasm.uclllabs.be. IN DNSKEY 257 3 8 AwEAAbGlG3sRArhml7tSE7H4q5fsan00GxbKxcVdU9gg6qBw2s+lZsVb Zt9t59HBXIdx8dwVwlUZreyyaZQ/lHZ++hPUVRG7ezlAwgr9qeCXOEhK PN8h1fakgJs3PFB3paxLGG0SfhH7U2VaJlUs68uPygdFHzh7kR4uy43f 8mbT7Wcv11LtQ+0rqRAH/Z2/R5eXEuGXeBPAlbxWY9PET62dIj7TmP6o HWUhKPgT2Aa01i42ed1qvj4pT34xlVJrNoUwfX1fE5MoEhEfhKNKBuiT ZzViAT1+r6b9NDZPHzjgB4+gfW1bqkRnv8rKh4HcqTHdtGGQ/VMcNW+H FYZIgoqhcfOy00SXwSxueb+tqNAs9z3HhxR1DNw4OujxfTZCbS1S3kHr U5esrxmFpsPQ8Vewdb036pCmFLNqyZ4lCxapNyJEyvFFsGuTfCzCwB6w eKqTtthgj1wPEiYVHQfnHh/Sc7OBAW00s0GjgVJ1KdbH1xNbHMf2JOOF K1W9I99FceYraBddRU7Pp/J5/GYZdXd7vxN6lVYOpNmgKOGFO/Anku6C JA/ahAs0AcRTQam/vf2pPxID0qzCLVhCZNEvGnNBXAhF5THUP9xwz6pd 4YmWQp1z3pEymQDPHAkzQPpw0W1iGePtmd1xzyMSgnLaEKB1dryRr8EA 62dezGkeZgDPPhNf
-; This is a zone-signing key, keyid 36960, for vic-menten.sasm.uclllabs.be.
-; Created: 20240816093605 (Fri Aug 16 11:36:05 2024)
-; Publish: 20240816093605 (Fri Aug 16 11:36:05 2024)
-; Activate: 20240816093605 (Fri Aug 16 11:36:05 2024)
-vic-menten.sasm.uclllabs.be. IN DNSKEY 256 3 8 AwEAAYubvkC/kdFIaoEkc95HB5mDyX7ubV6Kze9TbQfK9O60ld+8e0AE /1By/g4dY7vQzx0AmBa6EalfipZYwM7YJ+SPZnCHOxcovcUf9rT3tx0G 36rwCokSRP8FBtrGqKRcNjz4Bw+XUf13Vvh62gXwT6qSZ3IPOqh2yVZh 7kVGzl0Hi4vZT80zab4ewcSZ7ILRClQPOwwUg2yZREYFujQl0V/9OxRq 4UIfYmCnaQxNYynZc7V1jaYKzsJryFlVtjxL8JgY5OCOIs59Tw0DJIA+ lbOGQJ/nnXFeoMuzvgMu1ouA2vJzr/LRsaIr1hG74BNcM1JTefMHXpVm gxtW7HQ9uDU=
-mail    IN    MX    10    99.88.77.66
-mail    IN    A    99.88.77.66
+
+;vic-menten.sasm.uclllabs.be. IN DNSKEY 256 3 8 AwEAAZzRon/UQaX3wkgmG/ToxY46heTjQeBLIYR+LMSY+625tiS7Q2Pn nNWnLUOwZR0N22AKLgcXmnKifPvBgpntWYsZnnNsnhVp/GHXQ7dxT5PF jXrCBWJTkv8l27ntmk8iC6JlemEj5ov0hFe24U2UXN/AkKbl3kt8syLq saiVEFX6fPVyZXjRHdrMwklgUv+Dl+xQzYnsC6UnmggD2ZfxZiDfanNT 1l4djzr9H/tYwpRtp1DywW6TswgccEQUuTEWGwtza4+JZcawiy4Bc5Y8 CBcfOOX0W40PbFIoLoxfAXqHNIhy8uVQt5Dm+BJCrtdpDJzrjqjHLwFh 5NZeynCxpCM=
+
+vic-menten.sasm.uclllabs.be. IN DNSKEY 256 3 8 AwEAAa5N8s7HkAi14uPbd/6UJz7AafANzkLbwh2tT2ZGGbx2lYKWbcjd UrhmLvllUDlRNbz4p6AKMLHKr5qdhsSsvabINlRptO61rOe7xNPwLcac CRUmCzhNH/JvErx9cUGDHEKTfOx/Wxu6goRtkQIALCNsymPQ7smMGAFZ 4JgsaoIT4vjxcNJJk9S1DCZPhzQ6XFRRJcekNl8aLqYMTjh2NP5xVEjG EVhQPTk59n2HfR6QEVYpQid1C2mdLDb/4LUPYanF/sx7YYKu7zdE73WT qcAS4SKAI9P+wIQt1gvjbt7JiN7oENz4xFuCHGmIyODw10F+H6yklKSt hvRy24InJK0=
+
+vic-menten.sasm.uclllabs.be. IN DNSKEY 257 3 8 AwEAAc9NgwbvTxY2naiNRa6BgSiex9xZtXTez6EG/sY32fGX6oM6HLTv m/GMLb/JPV6ctxTrmuMmuwRoPe1vpWBqfA85DIfx21p8N8nEv7WYlHPK bZ4HY+Nflk4dHKuccW+VWNA2r8CpCG4M3DDWIj6efX42qHVfar6STrE+ 9/xkij7zqIvbp83p5Vv4tcx8P0REKDOTffHy8r0tc8Hbdmuf0ZcQcGCA I/Olx6YoKPoMXpqIyWrW/AIuH25+iVAdt9KKHDfr11KuIeStAygWpK9S xYqgdUS9CeTYdD7V0z7J2IfkHRd+wZjsujkQBqll4jY+Zskv5Jxu9I/p Iq13qCexFC8=

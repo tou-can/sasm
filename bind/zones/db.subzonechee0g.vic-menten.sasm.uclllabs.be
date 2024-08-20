@@ -7,7 +7,4 @@ $TTL    86400
                          86400 )       ; Negative Cache TTL
 ;
 @       IN      NS      ns.vic-menten.sasm.uclllabs.be.
-test    IN    A    12.34.56.78
-test    IN    A    12.34.56.78
-test    IN    A    12.34.56.78
-test    IN    A    12.34.56.78
+ies6th    IN    A    193.191.176.91

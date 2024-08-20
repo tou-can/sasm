@@ -8,6 +8,3 @@ $TTL    86400
 ;
 @       IN      NS      ns.vic-menten.sasm.uclllabs.be.
 test    IN    A    12.34.56.78
-test    IN    A    12.34.56.78
-test    IN    A    12.34.56.78
-test    IN    A    12.34.56.78

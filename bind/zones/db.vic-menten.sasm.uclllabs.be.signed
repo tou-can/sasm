@@ -1,506 +1,584 @@
-; File written on Fri Aug 16 11:42:38 2024
+; File written on Tue Aug 20 18:49:17 2024
 ; dnssec_signzone version 9.18.28-0ubuntu0.22.04.1-Ubuntu
 vic-menten.sasm.uclllabs.be. 86400 IN SOA ns.vic-menten.sasm.uclllabs.be. admin.vic-menten.sasm.uclllabs.be. (
-					2153111742 ; serial
+					2153111746 ; serial
 					604800     ; refresh (1 week)
 					86400      ; retry (1 day)
 					2419200    ; expire (4 weeks)
 					604800     ; minimum (1 week)
 					)
 			86400	RRSIG	SOA 8 4 86400 (
-					20240915084238 20240816084238 36960 vic-menten.sasm.uclllabs.be.
-					ERlE3ELWwbNzzdgCjI+ZBrgz4acIWQFFgCy/
-					VG//CjqmwzvCYdNfqm1ib1LcgafPCcx0ilkT
-					51GZut5ZjIijK6qU+gh9gr2bMsFaURijQX+t
-					BHNyq1Dsldai8F7QwZYNVshQyp7yP0XS5K5l
-					k7EZTip1uzB+dkg/7Jje96lKgyWG93lQki4+
-					d73O8k587NgjZ4gwinHe9CMXkpvumloFq6M3
-					MhdCtnR2PbrnMw33NkN3GvJuSGJptK24+r5r
-					S79shNBt8O0D97Znve2jzvK6fTHXxzdcwsyy
-					cMnyh8MujpQLqcBZPMAIr72H3BNQ7WBmaTLp
-					pBQaIt37QWbzYHSTxg== )
+					20240919154917 20240820154917 55194 vic-menten.sasm.uclllabs.be.
+					OBMpk8qMjwSojk2GrDlEoowapF7Cwzqx/I+n
+					q4cbU9PT9whVM0BXn1kMWsrntlNdtWES1v0s
+					pjzu2PQ8+sfWrfSjyH/GfuN85ns1ICHk6NjQ
+					IaV1y40tUOHWyANoc//7QOcunt6XlrbPWSXi
+					WPf6Dw4/CPZVE5s+iJIIpkcKwFqKNbFLCCXo
+					upFl4yN/iCOGdxZe4UalUmXCNoBp12N81VTJ
+					HOllDXOS6ZYDSy8kNPk0ZkYKAs4+5dMWHvg4
+					OCr8AilUAaQ+P9dX590BveuvQWkuhKncOKeR
+					/bv91GOxA7JvXu2KZdwKUir+uSzNZIts/v8J
+					04329IQ+6MECF3Y1mQ== )
 			86400	NS	ns.vic-menten.sasm.uclllabs.be.
 			86400	NS	ns1.uclllabs.be.
 			86400	NS	ns2.uclllabs.be.
 			86400	RRSIG	NS 8 4 86400 (
-					20240915084238 20240816084238 36960 vic-menten.sasm.uclllabs.be.
-					N6byCT4jtWYxgp6ezOQ11PsOeDPxYzCKQ+Ns
-					DDqby37mvdByQX3Q7h/EKMCUL2ve0Ld2JBCi
-					tJb65VtNXq1IcPo4xzglILkI4/OLu90brwoG
-					EiL+PyUgl5ziKhoJpJt6hyQVNzU8qkHEOOWs
-					9jlzAGwNCgUiwauLT4hkaHztwUlDcdlK4561
-					zMkZATo7FcSMVOQH9SSRBKG3+90xtgltSsF7
-					/bYNYPHusFz0ZNkUpjmmVhrVxVx+lcA28itD
-					y2CXiMOJUEuEkvfWZ118iwPV4OQDtDs47FFH
-					+rzc7TuCD72MQUmFsNjB/Pkwc1vZIvzANMxD
-					m1PIlNnUN+HuF6phJA== )
+					20240919154917 20240820154917 55194 vic-menten.sasm.uclllabs.be.
+					LvBQH0VPRVcMLXuq2FJHWMNuskMl+g08iR+6
+					ky6eKbLIHehrZ6RMJZCkLPqdpGgMj4hX0i0r
+					vMAYmIGDKUqfbL+n6Nmm8wj7oeBUhOzQvMm4
+					ZNcn5unvtvQrJki7f5lL8sIozzVjz5x10DQv
+					fGbvjo5K0y7Fc/Nmvnt22I1Ii2GqDbDFOviM
+					vMDpBiG12uL28nhkMc7/kQGL9D66X1Q2tXk4
+					devfJQeoOJF88jnZwlB3rlELeo6hKWI0vJGr
+					jLkE7ZgLbjLtpOpTIhcwKrqEcLpEBML9CJz0
+					ZWMNaOE3krZ5DPzgFcnlS/k41an85t60G8FP
+					ZxWWzwbN/gd30/VM5g== )
 			86400	A	193.191.176.91
 			86400	RRSIG	A 8 4 86400 (
-					20240915084238 20240816084238 36960 vic-menten.sasm.uclllabs.be.
-					TOh5zT7vY3net19GhW3FQzEJ6hxfELSPmBNm
-					VhlJDJ4/uQimG/1M3ZydLXpjFO4616dIZ//q
-					+q7ST/Ekj5gvOW/FfvkRQ4A7MtxCCm1Wwqrw
-					/89/8HGJCLeZxo+Z8kSA/F3tcDWTPrtrJjQz
-					4B6HmuGY79yFsiwp1uZreVK0YtONLpEDpeJx
-					527/SCNNBTrALx24kSCmi5OTt7u3vyFzasfl
-					bfYxuPuUw5FJiOkdIJK1H4BGS+DsuL06laww
-					Oi+7FH7tgawk06GHQAI+n1q6M2YzLR3lHy3x
-					14+XLgv4xM44V41bH94zAUXGDN2GlxVgQd2w
-					VpciM6Bl4XxwsZfx6A== )
+					20240919154917 20240820154917 55194 vic-menten.sasm.uclllabs.be.
+					HJ/9YwmzOYzcoXlvLTbgB5nBU2Xnm7hpcIaK
+					j0iCK/3acsWZTyQ/GO/1VldMVl2R+ZLQseyO
+					xUSfP7Q5snLDo7z5Q9GQoA8gSf16pl27+pPc
+					cCNjjiXNqfEtwFzqme2HV83uUvgYjGksfXEw
+					KUSYQXFyeXR+dgb8qQDpaxS09TnIVe4tjp2w
+					MC1ZJ2dF4NIFn/ROtng2cABAmX/0ccmKR3et
+					Oehd09mJkgpeI9RuBiDorMbggzoKYNMubcZS
+					M8wP/S6yJI0JFCUYorxdX2BdbeUyFultCwSy
+					B4GLNUH5IX3SURu0mufkh82zQElu68ERmtHg
+					WSplIotdAMZ3NHa0Jw== )
 			86400	MX	10 mx.vic-menten.sasm.uclllabs.be.
 			86400	RRSIG	MX 8 4 86400 (
-					20240915084238 20240816084238 36960 vic-menten.sasm.uclllabs.be.
-					D3rtTp3ZxHYkqy4dYPu9Dv3IsSc506pqWei2
-					+i+Aj1deeHgdcmfJvoJur2WT314ZWy4F6Fcb
-					NnxpYZaKO5Zp22cHbc8L8GexEh/xo6t2gzrG
-					jutMnPJzMRLVb3h7X98p8UYtIJkipsZVqU+k
-					c2ADTSkT6PMcPQO77EzzwMFnOuS7fqXWCc2U
-					qkjfIRib46GxHa1e3aksjXaQre3Ef+msieMC
-					r4q3PmL5KgJm4H7XWgcLsZiaSi/OPaLyQlW5
-					3FKEGvdB09CeASu5VtbBSbSPQLjGgeq+3MHx
-					M/HKzXpbLdGi9g/SyN4VT2ZI/k0f+NYwUJcQ
-					twMXR6ENldhZmgt1OQ== )
+					20240919154917 20240820154917 55194 vic-menten.sasm.uclllabs.be.
+					pCSD0ekS1W31IxrNCeSQctZKiBI2aSEVIcl+
+					z5FtpMDmSWBYwI7aZwBhPfa4L0qQgRhitCB5
+					xUeC2XZeS7q2zInpwoRfwGChqFnzyR30TDa6
+					980iPnYaLcnwtxDC+7bmTxYhgwAeO5Dhkdsx
+					YTLuFH8oOJ20I7sVfCgSSE3wX/F5z6nvB1Cq
+					5I3wprrrGIZiUHl3RWidD76g0Ggen70STthq
+					zXDw5/Z7rmdEpSQRfrV2utX/3Re64lFAYJqB
+					HQO+P/koiEur72gWJbAvCr8DzoKxKQjGVh+H
+					bICOZaJYTBkPvha3JfyC2IZSqcukBAxe1NsI
+					3frkRPV8I0fwUoGr9Q== )
 			86400	AAAA	2001:6a8:2880:a020::5b
 			86400	RRSIG	AAAA 8 4 86400 (
-					20240915084238 20240816084238 36960 vic-menten.sasm.uclllabs.be.
-					P3H3nbzrdJ4dDs9N/ZpVMdrH46y9r+v7bupR
-					0BcrEQidaHoQZzyCJhm0f4cucMLiPHpvzqVS
-					AWWv8mb2kWgtr3/jnAYE5JEIKTNuwJPE70+3
-					n/2DivC6bSq4HetUglG17XhzBWoidypdo4lq
-					a1RsjHdiRp7ChkV1E5Dvlp9Ku7pEdWjwjgLg
-					cbE2fEODbInvE8e/05L64T9dPzFeE0K9tXa4
-					pVHIVJlRYi6K2x8fgpxNI5oUSvwz/hz4MVSN
-					NO8E0kvo3SwibEfmBznHnUopQRUefM8CeFW+
-					vpxb1pFUOudKfqwYnmIgzWgjy1kkKXQa17RH
-					cWAyXQ3St6UzGQgYiQ== )
-			86400	NSEC	_acme-challenge.vic-menten.sasm.uclllabs.be. A NS SOA MX AAAA RRSIG NSEC DNSKEY
-			86400	RRSIG	NSEC 8 4 86400 (
-					20240915084238 20240816084238 36960 vic-menten.sasm.uclllabs.be.
-					BxZDQw0+PZOZOGFhjD5yivQ3EgEwus4kTgS5
-					N9slM1ipComS43Nt7aeGOHBsIO3HPc4c7Qut
-					nnrxI3tGn71++y2NvTjgJaRUhczrjj0Y4tcq
-					fQmuFbPey+XnizBLMFSIJBPMgKeWAEff/wte
-					TJcaxskim0O9VWqBMGz75AVkJKxTdM9m/CAP
-					Ru6oQTbM5pqq41vGfNx+UbFDp0JO9RlZIAcv
-					ziOceoaKI3QpHdrNyDhgOjiTdVQrFRFZHGGE
-					sY+WH4NONlmcECcY0BOrPX7CzPv+2tcDJCPV
-					SpR6a3hYOxg9cZUCrADDnFCDP8rKwYNrNmRZ
-					wCkMzw4m6jiaT+RPrA== )
+					20240919154917 20240820154917 55194 vic-menten.sasm.uclllabs.be.
+					YK2rXXkIffvAEwPFDj4gqczoEvhDoF1TFP12
+					0XQ4BWJK8Xi/oz3r7v3retoy/lDBFPWQz8Fr
+					wbAdueyIyzMN/subSBoXlRUE5u2hAYDf2fRp
+					ZfJU7MkHht9ARVIH4IZptxtbWG+ePX5/dI6x
+					gFYaLUqHFwtUYvRUo0j+7N+mrM1Y4scqzX4X
+					q2l8X0oh8mOQNyriv+EFnjEANeRF6np5boQO
+					OvEKlJ8Ypnfzg3N52upme01tIs7U+m7rRerP
+					caltV6eu/e4YFl+rvFLQxQrCHQvSn2aHfQI2
+					G/e2/IzeyxfVmygtQ1xAahM8r/Lhbx2BPUA9
+					0uYYzs3/b8IilhaFYQ== )
 			86400	DNSKEY	256 3 8 (
-					AwEAAYubvkC/kdFIaoEkc95HB5mDyX7ubV6K
-					ze9TbQfK9O60ld+8e0AE/1By/g4dY7vQzx0A
-					mBa6EalfipZYwM7YJ+SPZnCHOxcovcUf9rT3
-					tx0G36rwCokSRP8FBtrGqKRcNjz4Bw+XUf13
-					Vvh62gXwT6qSZ3IPOqh2yVZh7kVGzl0Hi4vZ
-					T80zab4ewcSZ7ILRClQPOwwUg2yZREYFujQl
-					0V/9OxRq4UIfYmCnaQxNYynZc7V1jaYKzsJr
-					yFlVtjxL8JgY5OCOIs59Tw0DJIA+lbOGQJ/n
-					nXFeoMuzvgMu1ouA2vJzr/LRsaIr1hG74BNc
-					M1JTefMHXpVmgxtW7HQ9uDU=
-					) ; ZSK; alg = RSASHA256 ; key id = 36960
+					AwEAAa5N8s7HkAi14uPbd/6UJz7AafANzkLb
+					wh2tT2ZGGbx2lYKWbcjdUrhmLvllUDlRNbz4
+					p6AKMLHKr5qdhsSsvabINlRptO61rOe7xNPw
+					LcacCRUmCzhNH/JvErx9cUGDHEKTfOx/Wxu6
+					goRtkQIALCNsymPQ7smMGAFZ4JgsaoIT4vjx
+					cNJJk9S1DCZPhzQ6XFRRJcekNl8aLqYMTjh2
+					NP5xVEjGEVhQPTk59n2HfR6QEVYpQid1C2md
+					LDb/4LUPYanF/sx7YYKu7zdE73WTqcAS4SKA
+					I9P+wIQt1gvjbt7JiN7oENz4xFuCHGmIyODw
+					10F+H6yklKSthvRy24InJK0=
+					) ; ZSK; alg = RSASHA256 ; key id = 55194
 			86400	DNSKEY	257 3 8 (
-					AwEAAbGlG3sRArhml7tSE7H4q5fsan00GxbK
-					xcVdU9gg6qBw2s+lZsVbZt9t59HBXIdx8dwV
-					wlUZreyyaZQ/lHZ++hPUVRG7ezlAwgr9qeCX
-					OEhKPN8h1fakgJs3PFB3paxLGG0SfhH7U2Va
-					JlUs68uPygdFHzh7kR4uy43f8mbT7Wcv11Lt
-					Q+0rqRAH/Z2/R5eXEuGXeBPAlbxWY9PET62d
-					Ij7TmP6oHWUhKPgT2Aa01i42ed1qvj4pT34x
-					lVJrNoUwfX1fE5MoEhEfhKNKBuiTZzViAT1+
-					r6b9NDZPHzjgB4+gfW1bqkRnv8rKh4HcqTHd
-					tGGQ/VMcNW+HFYZIgoqhcfOy00SXwSxueb+t
-					qNAs9z3HhxR1DNw4OujxfTZCbS1S3kHrU5es
-					rxmFpsPQ8Vewdb036pCmFLNqyZ4lCxapNyJE
-					yvFFsGuTfCzCwB6weKqTtthgj1wPEiYVHQfn
-					Hh/Sc7OBAW00s0GjgVJ1KdbH1xNbHMf2JOOF
-					K1W9I99FceYraBddRU7Pp/J5/GYZdXd7vxN6
-					lVYOpNmgKOGFO/Anku6CJA/ahAs0AcRTQam/
-					vf2pPxID0qzCLVhCZNEvGnNBXAhF5THUP9xw
-					z6pd4YmWQp1z3pEymQDPHAkzQPpw0W1iGePt
-					md1xzyMSgnLaEKB1dryRr8EA62dezGkeZgDP
-					PhNf
-					) ; KSK; alg = RSASHA256 ; key id = 12812
+					AwEAAc9NgwbvTxY2naiNRa6BgSiex9xZtXTe
+					z6EG/sY32fGX6oM6HLTvm/GMLb/JPV6ctxTr
+					muMmuwRoPe1vpWBqfA85DIfx21p8N8nEv7WY
+					lHPKbZ4HY+Nflk4dHKuccW+VWNA2r8CpCG4M
+					3DDWIj6efX42qHVfar6STrE+9/xkij7zqIvb
+					p83p5Vv4tcx8P0REKDOTffHy8r0tc8Hbdmuf
+					0ZcQcGCAI/Olx6YoKPoMXpqIyWrW/AIuH25+
+					iVAdt9KKHDfr11KuIeStAygWpK9SxYqgdUS9
+					CeTYdD7V0z7J2IfkHRd+wZjsujkQBqll4jY+
+					Zskv5Jxu9I/pIq13qCexFC8=
+					) ; KSK; alg = RSASHA256 ; key id = 37901
 			86400	RRSIG	DNSKEY 8 4 86400 (
-					20240915084238 20240816084238 12812 vic-menten.sasm.uclllabs.be.
-					omeg+gyQpGlg5s0JJbJLDqmCQh4SLZHDhLpA
-					TpbE/CFf+HZvlzZrCRzo7eywo37Q6eO2xfBh
-					50xpgpJhi70HVcZOR5MBDEWGPn9J+VM6/IPK
-					iTEM8tQFgvbcYJlpx09Mcm7mzu8/2AjkQ+BL
-					Qba2Qj4nerOt/ueg+py4ek/BpNOpwOoqwajz
-					CHWTz8ZmmoWS96zbr5xrMzplsWVf/R6CvQXh
-					imznShh9S27MNcp1gRSpOMBFKhizJ0HTZ66Z
-					Qve7O8sqbvqNqgKSKCJrcMD2QHRN8nOKtRtD
-					/ISN8tOWZE5H+8szMvEQxFV0idwEw0X6YA5y
-					60YM9i6RcRx6I/q0SF8fcWhiPKuA+sywA4Xa
-					WuMFAdEzl8AVguO1UP5BIexdt3MnO1dioaeh
-					17eRZ2xQ0Cpih0uRc0TPz54EYniLg8lVaqvC
-					j9+07i6j0HsJbSiJ0jVRhoK5D63f7HfjWqC8
-					ipUS+1osEY8jqMY1EDnVXWSHY1c9eRPtAU/v
-					XqW1gNU2fJVLoFCphJkVzKjOd4FhAw3t/S0E
-					HTqNaFdZo9QrerSoYL4lSaMN4VGR/XMotxUO
-					841DpuYVMyrjTcI3tSQMAUaHOSY6NrsDVspP
-					PhTuNAhZDPwFV9cBHBkAg6iDOe99lsZkjZaC
-					52paWBVQ/kfX/eRIFn9kRscDuClvVjckNOI= )
+					20240919154917 20240820154917 37901 vic-menten.sasm.uclllabs.be.
+					XGa0MjoQQY1viPuJLzxngJicvDu8S9W8prsI
+					wz4gf7mbpUyDE+45CdAJ6KyN61Y5SG+kL4iY
+					v/M4vv1Tu38vJli6fqsuG9c8L5TlURoemWuo
+					iRLUBrceABBLbONHUlLmjuHUa/gf9wANnIF3
+					yKkyjBJogH4ogXdWwT8pL7GJbNL4MhlQDfR9
+					Q5vB/DphVMr5QIDqYoblLDAJUKUIZE7qxhRP
+					Ioet80XdlQVkbthieTcqmdNdiAanSVayZ725
+					wTFMBo3K0rTZGbBnMK3H1Ar0caWDUSINKCpo
+					JTbsgfMUSwbWvM6Y2zzX0LnkAEZ1/F2qOyYI
+					QT94mBaPI9WxgC6JcA== )
 			86400	RRSIG	DNSKEY 8 4 86400 (
-					20240915084238 20240816084238 36960 vic-menten.sasm.uclllabs.be.
-					JHM4KCsy5AT1TaFaX1lCxaN9oAyqywW6gRjy
-					rXK211mNvjoqqClP9s7a6pHvae1oEM2vjOsa
-					6EmYM9lDcH++geOO8NWL/JH5byLMp7Yzp6PN
-					olghCSIUlXg0TLdRoEuBT0ERHkXLbOZknxLy
-					jX7bwUTtVh8pRJl2XJ7gIeQ9OCKwfL/A4GIh
-					oxNnelYYyT8Z+2dZ5rTuoabDbdNrM10c8B1e
-					ra/+O/7fDPtZjS8puTh8i9gBBLN4gOZCQXcl
-					GZ1OSbHFPznAT8YH+Vmi1JiPLsxe8uPQ9XLI
-					ejjJ03WzLroN/+RhcOwlqIMDhHzCr02du6VS
-					xAIThdeWy6nMJ4YhGA== )
-_acme-challenge.vic-menten.sasm.uclllabs.be. 86400 IN TXT "u0UL7bCeJZ_Z-nadJuppeBdsBpKq81PnLIKl1VAIZEY"
-			86400	RRSIG	TXT 8 5 86400 (
-					20240915084238 20240816084238 36960 vic-menten.sasm.uclllabs.be.
-					F6ewzKLEOb01r8yFovmjwdwrAXB/jRKY1RMF
-					9XHJmveBr5Pyf5BIypoGN3WmF3hHzhYVFBDE
-					HHN36ep1asCuglTohWQuaSpKPeJZnhSSSESt
-					JJqrDmrfSqS2lz3TO2fZgMubvvWrZ69yTUld
-					LIxDWcI6SpRYPOHW+cCtO2AFs+eVr9d09KhR
-					XYlwh0ciJegv2anFsItdTf35DXamTT/NBnCz
-					ETH6p+ZYDvamv7owJJIj1u3EexuVCbkgsul0
-					HuQj+tqAjgzIj6X93MhJUh0HmIL+JUrilAQR
-					Jm9MdAKIEyp9Qn6nkRYvEeWTIMOzPTWoKxc+
-					olCxiGjKiDnE+aRnPw== )
-			86400	NSEC	alias.vic-menten.sasm.uclllabs.be. TXT RRSIG NSEC
-			86400	RRSIG	NSEC 8 5 86400 (
-					20240915084238 20240816084238 36960 vic-menten.sasm.uclllabs.be.
-					al3i+Ul9Dlx3S0OKh26l36Oklhc2zgY4C9jm
-					9IprBo9wE9BvQQCwLIlqdNvE71coPRp4gk44
-					DwxOSDjoMwOxqTK7fUZcaKAfTZfgUKS3RgIa
-					rq+865YY3ERhpEHVamTlRYBjzG5DDfKH7GcW
-					jBvU1yminLKmIzeW+ptSdycqQiTPf8iN++UQ
-					vwXegiYOjbItCVshdZR1JI/jQY6Tzdt+zkpv
-					V+QzCS9DpGpAbUhPd1HdWdUTYPaMiRXxCHz7
-					LPceeqN6tDd/H4n9uCDAcC1MxsEtFspEaHyx
-					kAzLo9pKpBKEyU9D+6BiRZ1vNlkmRlnCtYMA
-					jrNsreXeg5914bI4HA== )
+					20240919154917 20240820154917 55194 vic-menten.sasm.uclllabs.be.
+					DBco6XQupdpTjqFyMY54PnulTFnFG6Mc4YoX
+					1iio9SGbxnGoKz+sbXr47yLb3YSorpuATH2N
+					bpaPRtHZgUouQwla2IPMBSD9bfrJviJCqbU9
+					UsMGd/MCpbkjKAmB47KfUlEgZ+G50MumjRrW
+					Ir/IYgofgNTnMyCl84SCchMtgMr9YPMaZFZe
+					RolPtn8JDkXgTrdtEqk4PQ+60Ki1xYAU+FfN
+					tO6Mjqz4IZGPfrl+beCJ9br4jBVHawE10wQw
+					Mu9fgwlOz+g4GSnlyL9FSSh1G5eL2Fu57xRU
+					D+buwaf0qiGBuA/VC06wf3VuiHbJ06WQn4We
+					298n7GxnHYJZnJ9fMA== )
+			0	NSEC3PARAM 1 0 0 4BB0824C23F5B9ACDBF4A792833474F5C51A8C0D
+			0	RRSIG	NSEC3PARAM 8 4 0 (
+					20240919154917 20240820154917 55194 vic-menten.sasm.uclllabs.be.
+					Dehr4w0Ax0QvNtG9goosNDFj0We2Hj+A21Ho
+					vPeh/Ct1G3Tjf0h/KfoWkUPxXgGUEDrOKO/z
+					6g7dzYTwjnHZTM3ocmF236/I48+R7l15+GHH
+					k7vY35gmATV/4MPP46mNgeyiaCf0AlyK4KI/
+					EsKzsaa4k7CjPin39veItv9/yFKtncXSL2kp
+					mK/ccJA2zmZRDm3akyihm0JRxSWE07sonBzn
+					RdRVTnCA9Tw9coRFhDBczzSOuJ15UcQ54yrc
+					+BgwXJzIrhOyTh2+Vwr8QLH7YXSkB8aGSAb8
+					QVHlZv9JlVQyeZdPiaUFL7NAQfHVkGbR9uGh
+					RPPRtFE9kiGUHb7k+Q== )
 alias.vic-menten.sasm.uclllabs.be. 86400 IN CNAME www.vic-menten.sasm.uclllabs.be.
 			86400	RRSIG	CNAME 8 5 86400 (
-					20240915084238 20240816084238 36960 vic-menten.sasm.uclllabs.be.
-					HCRIMMPYx0+1zdJXKlaExTPMZz6XP5U1LMM0
-					vURGH/Q6q2DisS+mTuVsfJACByc3OA/a03kD
-					8a0u5Y4hnwL3oZM35iEw417q1QmjvjTcrN5y
-					OLOzwJRlnm4kPJZI8pSuYJ6wp5T9OBuq/yJ8
-					K/YzGfWiiID48QQNadRIBm3Q2bdULaB90yDr
-					C82941ezzARbvX3asVcPf0u1darlqQsv9JbJ
-					lBN0wrcotAGxLHya6mr/MrR0zhP9ctXGsGG6
-					1+KIciSdGeEMORwZbaYeM1uyj1T8lMlVwg0b
-					0hZf9A64TJ0O8fDjIYGpd06PpXEnIUmEkMry
-					T9JbwX0XH9dVqlixlQ== )
-			86400	NSEC	mx.vic-menten.sasm.uclllabs.be. CNAME RRSIG NSEC
-			86400	RRSIG	NSEC 8 5 86400 (
-					20240915084238 20240816084238 36960 vic-menten.sasm.uclllabs.be.
-					CpwbK9avR40mj+lKaqea3dMmX5wwHnLdSZKL
-					AWzulRMxJYTIGQwXBxr1jHf4ajb201PQ5biU
-					ClBGBnBCElC5kh8MdlYjLoNPWOfsZPuBENaO
-					soxNBDbiv4mfQzYu4hPHeLDdaOnrJqKle6nm
-					UhQ+W8hlg6GkujridH3KYrPd5Swga5ecbkXF
-					cnq67XqHbcZKR8tFb4WrpTgr00UgJCvcHXIF
-					kLVrHatuyBm8jEHrSZlHenJQ9zgS4J2uuShI
-					uCcSvHTAmF/I836QR7UY5IVVLnvIV6KKWyG+
-					TVMOmr7u9W9DQEyYyXRLjJdXN+qVb/R516FC
-					V//O34oQ0r9+Q6OOCg== )
+					20240919154917 20240820154917 55194 vic-menten.sasm.uclllabs.be.
+					kzdBVGtoSYCGEQq8MIJayIp5l+8f4Pcr6Jk7
+					p8HVFfFbcFlJ0FpxFDBTHF3EvZLKhvj1e/RF
+					ym1t/XcTdL7fahJT8dzoTllkjBLvBOlaOJnC
+					9U6L27r0cW5KAsTvwWmUT7I/ujIV6NzTTmai
+					/fX1D/rycVRXaVb0FMD80YvYrQSsf8bhD8zp
+					SaIdYQA/u7dA55Idn9FBL86v1gDeKNuhcNan
+					6mRYbZiVZM14sD62kfBe0BNVtfjVYBpGP1aw
+					4JWU8QjQX25SG6gbRxQ4ylT6NtDW2/pisaS3
+					fi05+4M6npplMBA5Lb9Wklah4i5jGfUoienM
+					mfj99rNMONddC4LALA== )
+_acme-challenge.vic-menten.sasm.uclllabs.be. 86400 IN TXT "u0UL7bCeJZ_Z-nadJuppeBdsBpKq81PnLIKl1VAIZEY"
+			86400	RRSIG	TXT 8 5 86400 (
+					20240919154917 20240820154917 55194 vic-menten.sasm.uclllabs.be.
+					jqXMDriZjMTHGxEvBIYYoIVVDfCoAk5Hoj7O
+					qj8XsFjiy/XE1lkNdwndB4Je3d/Rx3JJ3wOx
+					RpQYcwSkxfefyqkwIb9vpjCk4I5k5IrRib75
+					jTUjkAjJj4o51pg4Y/uRILKOtarJaSFV09Vh
+					OuU97bltI13tbHuXCZT6Z3e7ShAIcQ1Cg0pw
+					FuWz9+d8mRUV6qEWGYpAhwI0C8Y9Bj6rxLIg
+					Gzoszz29mYAgp+owgA3k5K5hMA1tZxn9YvJf
+					yOoYq3KY2ba0xxMQnzmYHK0fHpnhf2TfwDDr
+					2L/kUJj2lY5gNRCzN2OqAgpLhQ6q9w31zI7T
+					cDIAx+Nj78InKt5MJA== )
 mx.vic-menten.sasm.uclllabs.be.	86400 IN A 193.191.176.91
 			86400	RRSIG	A 8 5 86400 (
-					20240915084238 20240816084238 36960 vic-menten.sasm.uclllabs.be.
-					PPHQD+GovPZwIfjXOQyxzAZ9dSIKaHTMhCWU
-					BA17I698l7q84+olhiyyi3MLGKmNbvhQKVF3
-					QKKvQOlT6XUsqkFlRcpT74BJ/F6HmqWVh2rc
-					x4abKSkfAK/PpNBxZxaibnCHHCtaEfiNvE6R
-					4YAsiAKDkIOmgf2cMbCGiAXHiRzno2Od9OM6
-					xV2+LyT7CSlpDyfBhzd669O9jF9XXtE88QN+
-					horMKhMI5xCxvENN4ij+YJbbJbvtWrjZoMx9
-					xdxehl7jyBcfJpDSxSYEIWeqGHLVxz+OwTFH
-					AIOPo3Z6weiIVXvUemy2cK1/qO7Uq30FQhCY
-					b/9o23psPnZ2qN0/pQ== )
-			86400	NSEC	ns.vic-menten.sasm.uclllabs.be. A RRSIG NSEC
-			86400	RRSIG	NSEC 8 5 86400 (
-					20240915084238 20240816084238 36960 vic-menten.sasm.uclllabs.be.
-					R/RJp12GicIL2Ae8NII/YdtBQ0aXa/5AyKL6
-					a4X5g/ELTM0cIHPthXyRFQaGI0fhYtW4E3v5
-					HqHhXrt6O3pKC/rmh1p0xvvh0uXABM1wAnDR
-					YB3RCpmMk+PCDUFjbQwtzUZYigMN/z/1zHwP
-					5PyLRRwhVTJU7Uv0Q1y5oVLIvMJ/jfcYuPqe
-					C6JR4GZwwYZpwzCQyBj706Ugo7ALxmwT4slj
-					hPML+Fbf9MTnBKF//frQzorSX7QGu6JHzuF4
-					WI5pH8P+py/NJf6m4Oysvh+o6d8OWDSE7K2i
-					Ih6LLiiZpcLKvq+QYAfaUdZ98J9dBMJ43N+E
-					4/te4eHkdjeOELwi2g== )
-secure.vic-menten.sasm.uclllabs.be. 86400 IN A 193.191.176.91
-			86400	RRSIG	A 8 5 86400 (
-					20240915084238 20240816084238 36960 vic-menten.sasm.uclllabs.be.
-					URt3453B5zQzctpGf2lIlkKLotC+78WLxdHZ
-					BWFyBHdKemJUi+bcshmICRaYj3EBeHBE7xOm
-					KeICzrHfzfJvE6Fz/DLkmwGQazMHHea+uCkc
-					wQSLz7jD4MpsJe/KaAj5qOyHIF9g7RlVkxLl
-					1KzUxOILqOvf9O+O0yUr1DnsWC0AaDJgENST
-					yZRjSRzAksT3pn6vAnQ7udMsrZajHXjPH/UZ
-					6S+8ry5X0ug1q0wfbCzQf3UFcbL3d4QfFIIy
-					sek56NmAhJEmVigaG+Bp4o/7UCRJaad6H3Qc
-					oPest/4885iSs5Ta7/Lon/rLnryzGtFH5OQc
-					XUmhlCU+MalD4i6b2w== )
-			86400	NSEC	_acme-challenge.secure.vic-menten.sasm.uclllabs.be. A RRSIG NSEC
-			86400	RRSIG	NSEC 8 5 86400 (
-					20240915084238 20240816084238 36960 vic-menten.sasm.uclllabs.be.
-					eBeWZ7UF2bQzMgTai4HdGKKnpgRMAV4UmL+s
-					52hQQbDRwZwQDQmn6fMy/wQm9aEIpBfkXf4P
-					JkVTknIWfrNhQZeXlBCbZtn97U3qhQMyf6rL
-					2phAV43YAHhLGjoCgXWBFvJxCMMS8nOQvZha
-					wOMXxPU+sNdygVK/jXCOyieBmJ/6lYPOjjZQ
-					fJ78T74b3nY2dC4fcu5nquUj1zKoQZYCrM0v
-					W502NyHbZifa86R0xDHWSTrRHwSDKP492vJN
-					1lxKwihKfqngWrqKW7pfHEO4xPSU6mRMy5ph
-					ndfxS++43lyGwIXE6VhP0gsvuCwMOZaEn39e
-					1Aq9Gnt1/NcUo+E4Aw== )
+					20240919154917 20240820154917 55194 vic-menten.sasm.uclllabs.be.
+					kwJ+TusmEvLrwZg/N5j8swHXicbzbEjpmeDA
+					ZUEx5A+YEUzrWx5bf6kvDw44OnrxF3LYNZkk
+					gTcGv1CNazykWI/igPYo2kH51IgQqp1Qqp/y
+					wriIr3qFFXLzionSnCasvs3o7pg4zsQ9qJyw
+					Z7jbZDqEDmNaIs6p2A3vr1pEGtDNZ0/q6ug2
+					J+5pcIK7lXwzcD86bn2GWhrxXp/QWjTc7E8i
+					o8r/4deqR4jG4FLT50AXOtSu/aYlu5DO4dCw
+					o/DHFWiMN+XmZ35YBLTsGj2KTAJfFEOeezr+
+					2qDSLzJ244oZAb4LC2Nvkz1uuGKMp92X4G1D
+					lAsA1jrZocobLBNJIg== )
 ns.vic-menten.sasm.uclllabs.be.	86400 IN A 193.191.176.91
 			86400	RRSIG	A 8 5 86400 (
-					20240915084238 20240816084238 36960 vic-menten.sasm.uclllabs.be.
-					YF87itM4iNrvgJABGKAw6AIE1NwMRBj8QiXL
-					jGchI7KS/D9JG+YOL6G70YHR3ftqajrAN8d4
-					/qsiWimFMWMVgYdQTJvBljn0VVu1PYCkKqYI
-					iB+6Uu0j53bI5tI0yGpwz6RERxrXTF3fVI1z
-					bqWl1NFKeQPOetbBdDLlgtVUEvWE0ZhETJsB
-					7UR7wZqbOu28ACw+/Pd5jHMWYVo/6rpcEYJr
-					TBDQuEUEjv80BRXNebMu4HUUsXo7sNscaUd7
-					cC7Kp6KeTZmAPB8Cj/VlA2mI6eNtxbJhDspw
-					Tg+NYSsmy/1XA6kV4OZdkhEGq4uEUQz+MKYh
-					hEeCydL2H8P+CN/pDw== )
+					20240919154917 20240820154917 55194 vic-menten.sasm.uclllabs.be.
+					iI0/9eWMxuXmUmSdEE0UIJyAw9aDIORGcRN6
+					sxTgvZgGH+4zUTMlCu5tk1bKqazSFFsruCX9
+					j30Qj+MkH+lJKHbQjCpsoARzU9X/2BYzfzp2
+					ek+SLu1ViioFQGLLKnbTpIGs24fEoO+1W5rL
+					vBygbr0JHN52oSZxRhnJvbOT+hPG22wGelUi
+					VnuRrqR2V4Z6tG4rgIaEkICZbmiQt6deYoRa
+					hYPcL4HYLf0RKrjwXsZ0oFYlCTD2fBaBK98B
+					fbrVDyoek6ysz8diL5PWEAU9Gf7HdYnmajNz
+					bT65oWh+ZDBs7h9LZ74k+/gFXHxNg6pPnzK6
+					gi5y1pGMsnNRiDfehw== )
 			86400	AAAA	2001:6a8:2880:a020::5b
 			86400	RRSIG	AAAA 8 5 86400 (
-					20240915084238 20240816084238 36960 vic-menten.sasm.uclllabs.be.
-					LYNSvv4ljm7yZwSN/b3w/vbvR+6v+6+XGalw
-					xaIJbJcEl4n3h9eGccpb5wA7fw5YIBpY0Gu4
-					U0lud5BF8FwOkJAZyyMH/B3fg2R9wuQ8awf2
-					MBadytLQj92Nxo2BfWnDs1e8VzdG6XL3ObL3
-					meHrMgb/F+XfSoo7CoC781X+NSksS7EG5wx3
-					muu2DNi8TxSfUpAtAOYGiHLO1mNd4ISbKNTV
-					RT+bhALb3ZKnuy7j/9ACIeHjWia7dTgBnzwJ
-					IZfUBeCESvTtMK5PFSbLpeRclJyehQNnWczn
-					Fe2fbFjuq2ZtNcYqnLynUuyjtN0PFX21Br4T
-					RIAAnQXxt3rK66jziA== )
-			86400	NSEC	secure.vic-menten.sasm.uclllabs.be. A AAAA RRSIG NSEC
-			86400	RRSIG	NSEC 8 5 86400 (
-					20240915084238 20240816084238 36960 vic-menten.sasm.uclllabs.be.
-					cIZbRhM7bnN/rjOPy0x6mEMcuvVpzDfby3Qp
-					pBn8b6lW7j2zowJ6OdobDzw59zBY1RwArc+8
-					VQj7vtKisL7ba+ffE6Q290MqSnPAvgAhBub0
-					M7RGDtXac1FiLXK13pfmz1B0ev0LOXxSVEIN
-					wO1dg1qJeSHduWOta+ukkJwzNI+jnoeq/jEb
-					U97d9+6i4oJJHoir9LqCR0bPCTmmzRgDdY9h
-					W8gqT8Ob/s0wfRcWMDpwx62++nTDMhOBKcVW
-					KWPvE9aLKhmfJrI24glxu/DrRTUxElWfnnLG
-					Wp2+o5PpVfEREdmKcYCLILcM1LyZ8G+ABqk6
-					HSJlx4Yu1du8IwAvWQ== )
+					20240919154917 20240820154917 55194 vic-menten.sasm.uclllabs.be.
+					T2wJRDWnwagD7s+xnrUXduaDod8kjMVvaJ98
+					BtTJBf6L24hjTn35nZAI+me9YPGrT2CswE8z
+					4Xg8cXO+rO+aoDldkcwUs0O/U8C2tzfYJ5EH
+					Si5Y2Q8QL/ainrzKDORUYTKgaejdwLZ6pHQ4
+					mDidpmxiI5BROLtDPpsm3dhfH2j3kFp9eh/k
+					+Xwkn9i4Rz5YQryvSw+ZYrMRz215GvbKv1yW
+					CEiveh1O4uJ+KM02gPNIb7Gm4fbWXf37ixh0
+					EU3sFexHi9CwfY6OqDe3zLK1T72ZaUBOR7R5
+					zV/lygPAa34BScDMndVG1gLSipnUtfS3PVF9
+					7m5MaPg17Vht05aATA== )
+secure.vic-menten.sasm.uclllabs.be. 86400 IN A 193.191.176.91
+			86400	RRSIG	A 8 5 86400 (
+					20240919154917 20240820154917 55194 vic-menten.sasm.uclllabs.be.
+					GhxKdgY++ZUd5GlxyIjx8pYxZKaInfCVYDW/
+					HXT/b66vi9gTd0VMG1COBEUDKWQ0e7SO6M+w
+					s0HtCj+PArd96MWuLl4m4CTOu2T4nnLUsCAE
+					pAaCYZO76vu/tUiN1mVhUKafotSFAPHrrXIU
+					Jf1aXPgvV0LQuF4YkMDp6ZHC51FR/fz6VXG5
+					YOg7HGYx3BgiIPklybiWSXhfuI6DR8rjsvIF
+					ZAVs08IIt6tzNyl0oyqjpSv+sQ3Qg4Jjt8Yw
+					m2SpCqai0wg/FlRjUgcsT3HM/9g6IZh+woPr
+					iah0uYgDfZqIcbDiMi0UtVdG7JCtDiXilCpJ
+					D6WwyxGHoT4+ogJEmA== )
 _acme-challenge.secure.vic-menten.sasm.uclllabs.be. 86400 IN TXT "7g6CsffWDYO_ndk36rry4ML1S21jWsgGv0KnRcmJRg4"
 			86400	RRSIG	TXT 8 6 86400 (
-					20240915084238 20240816084238 36960 vic-menten.sasm.uclllabs.be.
-					AKGROUGprz+5C5QSr5dJ5+pWEFv2z20Hd6FZ
-					PBlB+wR2XNAAkj1IEJ57cKjVrRqnscg//t9/
-					XiMHgdl+r0DaFRr1qOhxUCjQ2NkLltAvDNuR
-					/LH68OVEKUrrl2EZw89K282Kh1SP4BF/glD9
-					lw1M/ZHX/IqEBF3aIQ+Lr63y7j7R+2yCf+uk
-					ogNhd9sEBhJVXqHHqcMPZJ1iL6+YMZNsrjlZ
-					FzqLKerc11f4XH0O7/PlXslrNR7nVL0tLbLg
-					EGXw2ZFhRCMkh26mIb3j0hNp7b8LUA42q4Yv
-					d/yqa1bb1oma5k2cNtA/qoPT3i4LBm5tUphu
-					NZAFyAIAIVo8LZsNgA== )
-			86400	NSEC	supersecure.vic-menten.sasm.uclllabs.be. TXT RRSIG NSEC
-			86400	RRSIG	NSEC 8 6 86400 (
-					20240915084238 20240816084238 36960 vic-menten.sasm.uclllabs.be.
-					ipbiwqJx0EHHnjBoqqHyeSxh8mhGBK1R0nMv
-					HwmX2Sb7UulbtVRz0eyWA5OzA+hj/W9mLRii
-					2IZDsicHb77iFWK4Y90KbnNdPrajgFLgkJj/
-					nPJZGHGn5reoO/LbwlmPAMGggjINy3LqN7F6
-					C6poWgabPVcbBfquSUEgh1z+re4+vTYIh475
-					7r14T6MQ1TlJXcG900aMqrnV9iLj/9T0te0e
-					ObzrHwqrelIkevEY8qrq6ij2sI9+NBTbkSX6
-					zvoc8fR+OJBDQcTAyLwOm8wNZ/ekqyH1h9vi
-					OiHat4PYjc+/p8kVtRWdAJ8WUfVVGhZDFYQZ
-					ZFAsCiK+dzmzlLGR/g== )
+					20240919154917 20240820154917 55194 vic-menten.sasm.uclllabs.be.
+					WSQdNU3ow0Icx7/kGOiodXuHrYwgIvD5LBX2
+					bTL9crPTk1AsIHmvSheaCUJafiBV0S+NUeTz
+					u7KcNWT2lE+B3n12erIFwFnbyCZWwZed4VMY
+					3F78w5jBf+YrHVVQn+Zx/bRlkb8ht+Y5F6KC
+					exGXkW8fr+lok4HE6D+ypdIZlGSA4j3FEfT5
+					SaHINZDOZSBPDaKiG4BHEWUlEDoTDGG7DdBm
+					INbFRfz2j9qymPOofu6hB4vtHmez3LI6KSJ1
+					oPD//PCgAisTDFVEBPIealr9k3KqQ7yY3P5B
+					n3AUYU4RHF28TwpG58d4ORMmy8Tk2tanrjSC
+					7ZDJecPdawBZEq03pA== )
 supersecure.vic-menten.sasm.uclllabs.be. 86400 IN A 193.191.176.91
 			86400	RRSIG	A 8 5 86400 (
-					20240915084238 20240816084238 36960 vic-menten.sasm.uclllabs.be.
-					ZTdw0/jWHYkTYceb/mAtYyVU669p1Hr7mtXt
-					iii2BV1xhrzyceRvks1ikhqMf2v4sxMI2oxG
-					3bQNjHpu/YhIVN6/f3fFskPAA51r2l/X9WDh
-					XLHJfZDVYBwr6D4uxRn+oVMaHpF8XVMYJfRb
-					ijY5gMqEhm/Nnw3IwaHkxkD7N32z4ChkAGYr
-					GzhsHtNtR8IuOex4UkSfL8Amdnk09p689fsy
-					ywEWgbPSw+6uJQ3rpyMBNPYMyE9W97RLZA//
-					8cVHAEIkszSvX3R0cw9u8plupsW15zxYjk/t
-					ns6DQ0NOq66es+4jVn7FALQNaRNDjNMZkeBH
-					mrb/fNyLIN0Vt0fvWA== )
-			86400	NSEC	_acme-challenge.supersecure.vic-menten.sasm.uclllabs.be. A RRSIG NSEC
-			86400	RRSIG	NSEC 8 5 86400 (
-					20240915084238 20240816084238 36960 vic-menten.sasm.uclllabs.be.
-					ZHWfHkZctLEDJ66pRJ22ZvzHqHkjadwvcnTm
-					/NR3z4/bkNkKzl9J1v1UTE4yz4C2/3WIdpzR
-					ezbx1k3aC7IiYuPHaMuXzw8Zl+uQsY8eMPkL
-					SjnqGlCuguW/CvI6xWNQ+owy/3tnwWpy+RHF
-					CwXhAgulRvqgRt3OtzruEVwddn6JYhUkhdbe
-					xAAIH74hGFnAL4H+NG47EcYzIrZNt7NyBfSs
-					/ATtRQjTuwuupfcFTTl7Ez4UJ4mg08hZr/7C
-					ru6DDiW3orClWPoX0dmiHk0SmPDS30DNOuv4
-					sdM8qPMkTsWLhxwLawlzdw42MmUalLBGpv5j
-					JfN1/uqNZtGU7X0YoA== )
+					20240919154917 20240820154917 55194 vic-menten.sasm.uclllabs.be.
+					VOB+wgp+7OA5J2JCGtgNvH1/YclUA2DEkbJT
+					KyCqUm8HGUY5uFs9Q+kb0cvfPY4OUJtcsyuq
+					UtH+Mk6OwvOwZnS/Dg1Q0oqMI9rrcnU3ooCc
+					3eoBTAyH7mJJeF6VFQPS4elsaaX4xytwJ5U8
+					/U3gXEF7ezA/uuPV4+zG+sOpsX/EHZuLrmbZ
+					N1UKZiSvSf9T9sNyLG3jnUXbGeMhqAUUNWNv
+					Cpsiqx5K2OtQDGeSXiR8U8JRutUSVF8nW4Wx
+					fMU29jvz8zOECgBpQrDJ3jiJvdBWFtq2ULbp
+					OnvRrBzRWSqaKQCtPUwq6Ql1iqxj3HXQx46y
+					AfGY1xhD8kOWGgtfVg== )
 _acme-challenge.supersecure.vic-menten.sasm.uclllabs.be. 86400 IN TXT "ZDPBTIdLDtsr_V5GiNqSro5SD1HWUrFOjDsZ_dJqzkI"
 			86400	RRSIG	TXT 8 6 86400 (
-					20240915084238 20240816084238 36960 vic-menten.sasm.uclllabs.be.
-					CgCkzde7jTHQD20fGRcfXdkli9z2g9/vYp6R
-					CbiWVCYhilZQc75ZyqIdwnpBNrVYpLuCSIFa
-					qXlrW2HUfzAjDg6zzVbsKRF/hd6L8v1dlwEp
-					lydmA5YR1Ldrz8as8N2FsFfNr5k/nl6LJhRH
-					63F3BM7UuIczUb1aX3N6Fr6mn99xn0xxUVv7
-					3blL74dJjOwtU+moaJl/vvXYjibFeKpe3vyz
-					sllwxxsxAg3EZI09kgOGhEymy91XiOQot0+D
-					OmBVzrsT/wzGNd39ZdmLcD4um24dfsRLj+6B
-					Qgy5qWR5xfJjSWc5W/3xwQxqcCgzJ38RSQwq
-					ZPYk+Gk2yKJzM2TxKQ== )
-			86400	NSEC	test.vic-menten.sasm.uclllabs.be. TXT RRSIG NSEC
-			86400	RRSIG	NSEC 8 6 86400 (
-					20240915084238 20240816084238 36960 vic-menten.sasm.uclllabs.be.
-					SoUoxv57TJ970jSj+lmsV240Ua9krZ1dGKa7
-					LIQzEaF8qu5i5V/NT+bGvNlUa072nvE1r8GM
-					CDhuggNapyg4SWyRzFzOxXGYNEGbylBhouI+
-					BfVa9OgnXItj7OykoBhiE2fXfBbsk1KbzVeC
-					OneIXNfFU4HL4vjPXkBZghYtZwbMBG9TOnVl
-					Rvbu74Brof4bVmAaY6Mjjrj38RT0dzJYz+Da
-					h/gvaWXHDsabB7BfBo4vi580vTWLSTKX1odW
-					ys/KvVXYsLK3zRw824XeTqpp3LfrOHowjJQQ
-					XBKrt/kthSBBKGUMXYxUbBpsRHuOIqqE5AlJ
-					cTEcpBUJbcV5Hhp9gw== )
+					20240919154917 20240820154917 55194 vic-menten.sasm.uclllabs.be.
+					aGZBvQRgvVTKgrksH0vx6vngNc9yAoyv01Bx
+					sV73VWw6s7bWAdBctNR2Il0oZZxBXvGQOLDk
+					cim3w+xce4MjvmUy1wYIuA2h+SKP0pT4c49o
+					DZA69KIPt/e90SQOVAB0oysjZ1Us2+H+aY8A
+					k2Of6sIaNAW6j4w9v+V2otDvR5itmguJTmv0
+					FIlOewAQ9007iEWL4XyXx08R+R7WvEegeXRb
+					Ayy47hUTYsi5o7XthyT8Tk1jOE48z7apcI6a
+					FZR6d/43OskwdqabJDXufH/E4gfoiAvrfVy4
+					oCvv5Hdgw/hnMUQbZyYqrhbo2EuDZ9EFpKHp
+					wuWLNBJCoxEI0ydZLQ== )
 test.vic-menten.sasm.uclllabs.be. 86400	IN A 193.191.177.254
 			86400	RRSIG	A 8 5 86400 (
-					20240915084238 20240816084238 36960 vic-menten.sasm.uclllabs.be.
-					aLp/tCk+qp5Ifrk+WkxGo/8u13pdE054iafR
-					kwqH4j6dNm0XNKM+j0Ksm1nmcvmV31ruL7EC
-					Lq8fR1/AUTM0nawACSJLdYnLD0Hjz6UbWKzb
-					pxQch0HnPE9+h2r4D0BRLrGtzKkmZWmOkcFU
-					ESLJIV8KgadwPcgpGWF2i7C/MXer3TPIvFOu
-					fNSKm5yLfzgKdoQmUQUOYTkWk13aUPNj+34k
-					5YFCiiIsfB3XDeEn8UzVlFf8ayiSFCwPflHx
-					WNLp1fMvNHe93nK8z+7g8+GKjpMlAeLCQ5ZO
-					C2GnqnsaQ3Uibhv8eGJcA7s0I8UyFNB3BHVr
-					6gwfzsn3SmhYkxig7Q== )
-			86400	NSEC	tweakers.vic-menten.sasm.uclllabs.be. A RRSIG NSEC
-			86400	RRSIG	NSEC 8 5 86400 (
-					20240915084238 20240816084238 36960 vic-menten.sasm.uclllabs.be.
-					iTSGj2EgbhnKs29k0MHVxokXn+DPEeFy9kPC
-					PWMudBaOZXFjt5NYPuX6u/XK+BzSLotlwhO8
-					BRa9sAckB3kqXz3LOh2agcafrHwzeBVKQRm+
-					4Hq2dWijoiebdNjrwuNP6eXn7GhE+tQRKW+U
-					ip9vAdVgun6Sf1i2v+5uQxYoM0BnGDZexA0e
-					3Y+9Gm/s73mVyMzwvEEPjbLOqR4z4JGVe0Dt
-					nz+lVkcPfmJobU4ED2ERQboPxROQsfUwRvrK
-					56laeBZrIr5HZl/jtaAKgdWtoRmGxCmBNLGR
-					Wk6ticUUAUJHjWuoCwi8Odv6JkM5lJiYYh2f
-					Ydz0T+6PqocFs+GNBg== )
+					20240919154917 20240820154917 55194 vic-menten.sasm.uclllabs.be.
+					Dr5CCO6mpg5tWH/2cNHlAvgO6VPk0o7aQBpo
+					BBFE3j9ByTR40PqYmWYOB6rh3bL4/t89bRut
+					DqcwVwwRpVnwDxuVHHY8eliRPaDsD0xsz4Z5
+					wX+kdNXtwCT7OhFVYttISFRi75DPFnAs9p9s
+					IRqUNfdSMFl2evLHEKt9gxVrAt0Ykisox6KF
+					NZDm7O88++fpfa1b2EG2u3W5GvFabxGHFnbG
+					adRxdfTp4lGT8cXNRWZSUDdJ6k5GtHlvsf/J
+					rtYNv9593+SNbD0ZITHT4pbbz5qepzDiQoy6
+					Z5Wi7IM1y6l23++dqpYE3A+hfWMyICkYZRUG
+					R5mbiZmLV0D8yAhy0g== )
 tweakers.vic-menten.sasm.uclllabs.be. 86400 IN A 193.191.176.91
 			86400	RRSIG	A 8 5 86400 (
-					20240915084238 20240816084238 36960 vic-menten.sasm.uclllabs.be.
-					JzDR/9yhwosaKI3zP63H6tt2ZzpHXJupGmKU
-					YpPFrtpgGUcbjK9NnI9jW8/DBXGaZr+YEdl9
-					h8Kt8/CB1qoKds35NnDmAFmPhVgL7wU31mm+
-					b8j/utiaFlCftFDLIT9r7wHEfA8humN1MXRs
-					E0Q0OOAfSjqoBqdOeBkf4rfbguCTs9lRUS5e
-					ngpM7jSOZdevMjm2PalukfukSOjPUoyotj1K
-					lsj5h/gWa7LYS9ijcCFmHSmuUJhPFWHUFWPX
-					iw+BmiKbDRNV63ldzEW31n0XOKQhxIdJhQ4K
-					zkQ1k8Ehzq2hj/ltMqwqFwY/aXZKAVPSmead
-					mjmqcMGpfTPuEoSJcg== )
-			86400	NSEC	www.vic-menten.sasm.uclllabs.be. A RRSIG NSEC
-			86400	RRSIG	NSEC 8 5 86400 (
-					20240915084238 20240816084238 36960 vic-menten.sasm.uclllabs.be.
-					aVr8loLEOhuLM1fRnrCN2KC0eJTKcFKVGYeG
-					PjghdELDCObfKa+zz9wKkf7uKtYnCL2b75wf
-					tTW1C3TW1uY+vT8vokgO/7OFr95nAMvsu8jd
-					upBZIH6zl8Vqc5etBFtQMcGWvLEQMBg+TIwa
-					qpQIE+iY0eMtz8vQFlGoLUeHER+RfqH9hXGn
-					BoTeosUh3Z1hXfhc3wIzMRM49J1cj8kQ801Q
-					6jbJBGW23G1FcPJC5SrUky0yPI1/p/Pic7mG
-					OPCquzqK+sU0kWFvscU1ofYH9PvDkufNWRBk
-					GBJXhntMRUhBOrVLxShM/IUnqkdUmA3lFRwl
-					1l+if1juZ0iyf0AXtg== )
-www.vic-menten.sasm.uclllabs.be. 86400 IN A 193.191.176.91
-			86400	RRSIG	A 8 5 86400 (
-					20240915084238 20240816084238 36960 vic-menten.sasm.uclllabs.be.
-					LJEecYS+Z+X7YzGaDtp8lIaGdlM5RJdzm8CE
-					SlRPr6jPN8ZS9mOAm5sucK1ZeNrNLeE/pYym
-					iWAEY0x4FZoSUgwfHR8taQfjCDDSsyufvB0Z
-					wUJhzSLlamRGOEKUnuP2HkSTdseMp36WWNsV
-					LPwxE2Qj/K/cm/lLSbEo+JY88Bo90cRX6FDM
-					J0w3QE48tpmgatniTCMDQP+/nLAULA4sOUd3
-					7g+BgvHldzL07NkZlg2Mwr7hkX+u/jLCtBpW
-					nL/wmi//NHToAX19A5d6AoG45nZ+zeUzX2ia
-					DxxEQImhGIxK6sFopiW2jWsqvhn0kSOaBkNv
-					3CQIbZam+7Yz+FL3uw== )
-			86400	NSEC	www1.vic-menten.sasm.uclllabs.be. A RRSIG NSEC
-			86400	RRSIG	NSEC 8 5 86400 (
-					20240915084238 20240816084238 36960 vic-menten.sasm.uclllabs.be.
-					WR0emYa1iu7GOFfUaM0Bj0mGqb7b5gb6LRcw
-					CzYSCvvuhtmeYTpJZpIG61N/2yMqkZMNGwBr
-					nn1y9Ht1tisn4kon35XLL7NJoxGD18LP0Uy9
-					Hw3LIcNWr2jsLGuruRhOJBLMamRW+R5eTUQ0
-					sfRL4/crFPHOuFnBJEogypRh+Gm7Rch0wVjM
-					bquXGpDJCxBTLBojSz17TerIEpXHsaZu7s27
-					PFaD3iQc7eeCcOP3KTYY812iSIpzybGtUMOH
-					lN1fccDYBREzZfx+EYgVmHCZOrQ+OWHN4psQ
-					1055LAvyIuAYso0D4rfJnSCtWfQj/9uWuaqN
-					um89XRSQXdNx4pUxEA== )
+					20240919154917 20240820154917 55194 vic-menten.sasm.uclllabs.be.
+					ogeFWUZjy2cSKFxTJ4DMuAdmRjDKuL0nOM1r
+					Ca44laHETb0gjzJzsmITa9I0wA3yFSgBzdhs
+					11/FSdGDDngXYuf7hwiyXoqNkd3tDF2Vr/ZZ
+					ZpC0EWHKTnDIc/7Migd1P4iWyvilDMavJSeh
+					aa1sTrEfwHN4+gQRQ2ip+3DW8MATbZmurrU5
+					3clGLZkhTT/9jqz76eSP3M//IVsLl09XZl9T
+					9xscGT1xRUhvKQTKRZHDKJOa2s25RMoqhJP6
+					AB0Iw8Zf7DXiyfLDcSWO0tEj+8ctnLDkKn74
+					1/k357p55yMjihfjGn112X4l0dRS7/sanJzX
+					UQjsV3ILVYc1g6BnKg== )
+vic-menten.vic-menten.sasm.uclllabs.be.	86400 IN AAAA 2a02:1807:4300:3e00:9ce9:d1c8:4dca:2cde
+			86400	RRSIG	AAAA 8 5 86400 (
+					20240919154917 20240820154917 55194 vic-menten.sasm.uclllabs.be.
+					e0/ymqsWwZmaeGpKvNoZhdyt7Ekzr/QGDtfe
+					0LeQte5wLEQnf7qPIyVx2FhyswcpQNnySJqb
+					SbtgTnvc1eRtpz4JDrVuIZIgUO/n2iKdm8jH
+					Vr7k+wSUQXD4KO5heDUWjDMDSImggJ/8/uGi
+					97HZSgMZfGHbRPZnM/oAZmY6eZgbkrt+gA/e
+					Ulwi5GRocJGC2uLXE1HYof9fysggdP8SaekV
+					R1KaJNA5ESNz3iJALi537fYRqk6FK8QWN4DB
+					BmaW4j+kRjq/Ow+vxkk5GspF27hwTEGXamgk
+					UQ0ZunHuTnrQzVG1JwFpefwg+IOa7YVA9OFC
+					v7S0V1YAFN+SvHP7vQ== )
+ns.vic-menten.vic-menten.sasm.uclllabs.be. 86400 IN AAAA 2a02:1807:4300:3e00:9ce9:d1c8:4dca:2cde
+			86400	RRSIG	AAAA 8 6 86400 (
+					20240919154917 20240820154917 55194 vic-menten.sasm.uclllabs.be.
+					qmBZz1Ex1tMkJ4x15JMCR6+ryjCRnTSf6eQy
+					p4Wc8LnlB+EQbW4Vss42oUamfGeOknrbR9TO
+					7seKLtRrQdCVIBhOSm6p9z+BOtq7N09g79rU
+					b4yhN3cNfuGmdRrhIf4qxZbfjq0N0I91HJS5
+					yvmh29znPt4253umdCCFNVp74+QlSHhmEJ8t
+					yb6+ChvjF+03nOn1DoOCoNR2sAz2S5ZuS6xT
+					fNbNk7al6Qnbf3viEMRYd+Uwp+tgvvyTjg9m
+					dO1E3SQdhxlDt0Re3lbAfwkTOAv3DdgtvGyd
+					cuD4awacu28cGClgvtZy6nTiPU2aX/eO7pnE
+					hI3PXGc6PCCJni5PRA== )
 www1.vic-menten.sasm.uclllabs.be. 86400	IN A 193.191.176.91
 			86400	RRSIG	A 8 5 86400 (
-					20240915084238 20240816084238 36960 vic-menten.sasm.uclllabs.be.
-					WjCBWMazHqi5FhWAunwUP8yh58dpk/2YvNcV
-					3ezjFU8Ful66U5/wbR8akKaJuC1/KC6QKZ4X
-					KN10UxYZhrGZuOlMEMTOO4CaqUYtZzQoAbpp
-					VUf0jdC1WwEIvcmFLPww5NUs0eIsBWEubWBK
-					Cf1kA1JzQ+HUA0MFZ2EkvAr8o/xbO2lF80gB
-					GXZ+uGnXukxWtAcvxs76740/JI9xY8Hq84/V
-					KvzzYsvdJ93dMrUNwzZpPjJ5aMLFOniwMRhU
-					rAyoiXRr+KEbXJdaInIjL9EcJKJGA9PuoCIb
-					rjrIUNgZyQMj8JSTnzOEdHDgobrtSqyvKQqK
-					C/IU9M7wo4DBCVB/Mw== )
-			86400	NSEC	www2.vic-menten.sasm.uclllabs.be. A RRSIG NSEC
-			86400	RRSIG	NSEC 8 5 86400 (
-					20240915084238 20240816084238 36960 vic-menten.sasm.uclllabs.be.
-					boUwVDE9O1zR/OJoiJE1YclDJ6+wkve8HNo5
-					vbORJ+909Bomz8MIsmJauEjl8068QCHIRzAz
-					lwJCm5bAIfzklqJtG/W4mGUQqht3otWgrjWj
-					Ye5PpYUMkSjEe0xdxzZbD95ZcElk/gaku9K+
-					OPE/R0PkBXtRh/4/yOqF2o0wykjzE1nhxkv6
-					y7G0/adLu/kyYls3ns9S3r1aVQ9aeIZHHfjT
-					4y+3mS4QDk6Tk8yJ2XHgq2/oB4CDP7mGYF53
-					ueyhr5qJC04L7xXVsFVQiB0Un2nR+jKe6PYP
-					7kiMs16zddYWQAHkbwqpblDRfXHfZ2WLLZta
-					JLaAe0K3IXQNe6AQFw== )
+					20240919154917 20240820154917 55194 vic-menten.sasm.uclllabs.be.
+					PehlBXbP8FFP5EhTfRliZrkEJNQZQnW3E/1/
+					hkCz+rznDhJqwqjHcXcjeTOzxwXrLo4ivzMF
+					aS179+cXnyHp+AEMX9flTc5e7PBpfMyGd9Tx
+					1xl+tgBblwPXlsvVTW7yCHYE8dO7ShjhCzbk
+					fW+74SLUFkJ7bKFm2PlHmEQoHO/F0e/u3k3e
+					nV7rmTH5NvHNVMRyBY6gojQSSa4D0IFe45D+
+					gmB8OkocvokWPSo1c2VeMPrWLs0PhLgcWd3r
+					2xsP9hEYGuRaZ2oNO6MIA9WeCHYxsZmcHs2T
+					eeIdq3O/stmWqX8MQp/kqKoKximopYZBdKdC
+					RCO/3GI+UM5sLoDEIA== )
 www2.vic-menten.sasm.uclllabs.be. 86400	IN A 193.191.176.91
 			86400	RRSIG	A 8 5 86400 (
-					20240915084238 20240816084238 36960 vic-menten.sasm.uclllabs.be.
-					G61ed4H7SErCkCOTr9jycv4IT3IeRY8VYRDG
-					FXnZkTQhPlF1UqYZK8fK/tS0VzaJOVUHq7Qw
-					75SWVITS4MENft89/toQTW+R1P3VJb72TYmp
-					g7zvkbl4IgnBDF4SzHopC3XOwxE+ZiyzT6QM
-					dblIItx4deBw2cWScSnUqb0HvwhK6nk18Hc6
-					SJ/+h4E3BSmolhgrJb/gdBO3zOueRGMmvs9l
-					ZbUgCI0kqHA5XrHGRC5R89wwBUHlE9lAUcFN
-					amvXJiR+rFCqwUyniw7MVNnxJxkld5wSvsl8
-					wJq5ATZaEF/YXm+1pSDJ8aeppznP99jemIeM
-					D9kcFgK21Pp5KuXYHA== )
-			86400	NSEC	vic-menten.sasm.uclllabs.be. A RRSIG NSEC
-			86400	RRSIG	NSEC 8 5 86400 (
-					20240915084238 20240816084238 36960 vic-menten.sasm.uclllabs.be.
-					WZLARIx7cyzULtuyVcn8YKthnjLoSCegZxtL
-					9EK4klaIrvTsXIl7UDWc8qPeou/7s2CWbCqB
-					FYUYP7ObbPBNOxBCeuC2NQ6XqwwZBT5/LLc+
-					ivfVDyhR7/xSvERfeUG8t+6FaoSEJ01wqJL2
-					C88ph0uH/+SIYhIRMJzpZGTjZc5ZmacaWazV
-					UA27QZ1+7SyxPfN8s8Hg1ZhvQma6PSLjLJ79
-					otD+LV2GjYYYnP09p7RKhjvEgbFHvm6b5G41
-					+w9pXZ8Wth7UAkKsLNI8xeruxqau1GthZK8t
-					cZXLAVy9opW93iIgrDFWCWq50aXq/99kzVNd
-					1phR38g/xTo4ta2pZw== )
+					20240919154917 20240820154917 55194 vic-menten.sasm.uclllabs.be.
+					KDFmKZ1Sqyu9MdlqgaMko9PF2I7+99QJEFaU
+					40vOM1FRHzZ/dGJzXoLAIMu5AD5ecnwholgK
+					98UTHpyYxAelSyy20fpjU2BZhvevsNG88kkb
+					m20eyNcWXNT6x5hSYdWkP1WHitWuLpekOSa4
+					0avKxl9Ah5KDNrKr/fk+2G0SSnEguRg5apIB
+					uV/+qrPZ6APHukIjyNX558hLzLdiOrdOgkrc
+					OD65d1z6yvFhHMceP9wrKt/2yNm6MtmzTM5c
+					Y3Dis+0JhjjWweD2xnfo/rvENVHTVcU7x3ip
+					6Afe/Ru+/0XW0xSWo2ktDlzrFyuFzTbhBvSs
+					u/IJRluGLPRC8x4NqA== )
+www.vic-menten.sasm.uclllabs.be. 86400 IN A 193.191.176.91
+			86400	RRSIG	A 8 5 86400 (
+					20240919154917 20240820154917 55194 vic-menten.sasm.uclllabs.be.
+					cYEhde8nr6BHeLrfJsox29RnGxcYycuHcucA
+					ieMLb+EZJ1GinDADKCuI31ZIJSjM3tYBEnh2
+					fHaNIOcvqkYn2/vN53BXmQsqTKuJ50zVFkSE
+					ILEbuu1Q0GHFlvIH9+806+VH1DkNEYRKXbbD
+					l7gs4GykJ0AwTzK0i4BtqAQZnm/P4HD6MQ1g
+					qSvsHzUgMHDUU+t/dJGK3O92VfDQ0gn2FVNg
+					C61uhphgXeVuoaLbN0rMdEsx2vYiGqdp4zvD
+					FscuiLL6cv9k4OnFDuaWb74lqgMldpiqiSi7
+					rHGFIpGlp4k+Qvy1rBAR5oxUZtRm0ZN646LP
+					afawH76q6+OTchPW8Q== )
+456UJE597NDACCE4CGRDMG8BQPUPDPUB.vic-menten.sasm.uclllabs.be. 86400 IN NSEC3 1 1 0 4BB0824C23F5B9ACDBF4A792833474F5C51A8C0D (
+					5GS2SP6QOG6BL5EDP6R44N75H0BGPPTB
+					A AAAA RRSIG )
+			86400	RRSIG	NSEC3 8 5 86400 (
+					20240919154917 20240820154917 55194 vic-menten.sasm.uclllabs.be.
+					I5T42J0Migr4NH8NGWYygZoDIxvOWhFRY1Xj
+					UXSjszGHR/aq3qTVQjMf4kGTah5rnX0wchdN
+					r4P1iM9iMmxf94I7vnrLpaMzHIWOSpWjDMTU
+					EGP3WId5Fau2bPH4srfTbpZy8EKoidZaotPP
+					jV/nMoZ4lM3Ya5AA0zqmI7NFwdVL4Nhy6xFc
+					SdzzLEEEgU/UT5T26E5w4TPkb4VInJMB08an
+					pPFjbym9v709RijJW0QIrxa73vD5+F7KVI/C
+					OZ66nGYfC2a/HGGoTGE0RisXcHhWuHwIul0o
+					CQ8hdiBfkeGxb7c/7O4Op7t/t65oGXKdUJTY
+					oG/mVE7Oxf6JHLq0PQ== )
+1PI904HCOM9D1T583J207QD43Q77V3S6.vic-menten.sasm.uclllabs.be. 86400 IN NSEC3 1 1 0 4BB0824C23F5B9ACDBF4A792833474F5C51A8C0D (
+					456UJE597NDACCE4CGRDMG8BQPUPDPUB
+					CNAME RRSIG )
+			86400	RRSIG	NSEC3 8 5 86400 (
+					20240919154917 20240820154917 55194 vic-menten.sasm.uclllabs.be.
+					pVObZN7rcTKKUlhyNKOxvsjk4UQbp2qT6Doz
+					iC/hOSiGPuFYa4N1dEoKgoZXzkLUJxor1IB2
+					0UrT72iWxdyGdAkoyY/ULCnk2kRWUlyuA6WW
+					G5V0o1GVyGHzqscWhvqhTNsEziQZVeF/PwdT
+					Kloulfd9lnkSwj2Rxg5HOH1bMLbFia05VXIp
+					ij8wneGx9rCf3+0BuFU8M5Yc47AW3ANyvd20
+					0cPb7ypIwQ/AqOOTVfnSqlpDGh/X0SxC6nLJ
+					Lk6a852eFYkwjeo9w6+bqLaHEl3o9Mq0Dj9I
+					q+Ia6Ug8kNNpoCp+yXEtGeHccC6URwbSl6Rd
+					EHR+Z2+m2Np/ooIEKg== )
+5GS2SP6QOG6BL5EDP6R44N75H0BGPPTB.vic-menten.sasm.uclllabs.be. 86400 IN NSEC3 1 1 0 4BB0824C23F5B9ACDBF4A792833474F5C51A8C0D (
+					6NF0T8AL32ETBPKAO1QA0PID3O27T92C
+					A RRSIG )
+			86400	RRSIG	NSEC3 8 5 86400 (
+					20240919154917 20240820154917 55194 vic-menten.sasm.uclllabs.be.
+					g8wJeTnYxhqpreuffaaD2HcPteLNobGUiRcP
+					/CH7fuyzP8nDqXhgMeZdSrtnUtayebPAlVUB
+					akJUXTJbggH3GNGJAAja6E1+19iXYACoLdg9
+					iCKcWHodcGrj2DrFIOnd8dHRpGIh7IFYI8AG
+					jrWZKZb7B6YZPd1nAe8wS0oIUwy7hkA3AIjb
+					lZc3nI//BhEowZwavFF57vjdIArj0HG3AAc0
+					6uQe80SFuaE4uH2YChWe7KzsVzOwnYtvql+2
+					WP6w/aV7iUV0qNsi0R5RSv7dnDgZ/9CkYGzz
+					KANChgIYU8XDGMFAmQelMSfd2eG8V1UKq98e
+					6Wl53Qlxm9SHVOcJuQ== )
+6NF0T8AL32ETBPKAO1QA0PID3O27T92C.vic-menten.sasm.uclllabs.be. 86400 IN NSEC3 1 1 0 4BB0824C23F5B9ACDBF4A792833474F5C51A8C0D (
+					AGUUR2JT724IET5LSV41UAHEET0VHL7A
+					A RRSIG )
+			86400	RRSIG	NSEC3 8 5 86400 (
+					20240919154917 20240820154917 55194 vic-menten.sasm.uclllabs.be.
+					MhZUMMolQ05DHU0YKJbS9wUl+LlpBXp4HgT8
+					7UM5k/jP0zy7uIulHOt1TnFNizOxOiW+U6L+
+					sJoNyqF3/TZZEgUlkUJuSvYAM9zdrnIFgTq5
+					2O+Si2/WmAGsauEyBBvpZ+ZQJ8HZZQmsOd24
+					zgsMWWe9mJ0UoVF+F7YqbDnSOrdurkB2wQat
+					ILSv2KhC4qCqh9nFhvh2oXF+dZi0H3F27EGd
+					ah9LSTKPFgN46nPMIA0hBoOlTHagJdXlrbDm
+					Kj8LjXLyu1umfpNL1UHhkvWl4VxR5acHPczY
+					/NO8O5gy+/sxDH5Csvg+jaQEvWXAdR6WD6hi
+					ropB63dmqtIlp+L57A== )
+AGUUR2JT724IET5LSV41UAHEET0VHL7A.vic-menten.sasm.uclllabs.be. 86400 IN NSEC3 1 1 0 4BB0824C23F5B9ACDBF4A792833474F5C51A8C0D (
+					BUQN4SLRM2IOCDRCPII2FAVCBJKTH348
+					AAAA RRSIG )
+			86400	RRSIG	NSEC3 8 5 86400 (
+					20240919154917 20240820154917 55194 vic-menten.sasm.uclllabs.be.
+					bejPLKuru5LSY9x4Lg80Fdzqwg5s6N8bhXlo
+					FIM2CB9YQVsreUd//Nf4ebqSTo2WoGxk0Gqz
+					OQ0HTurH5Zoi6ZAObKerMzBqQ3iYDV4VeXK1
+					c2tXmHR+bGKZC3OWShopmT5I8MozTp2LUB9T
+					89RYckcDczd/l9SpnUissMjh3mFme/8XUFPI
+					JNRt5psk7N9BnORJ13r79XD6MkNtsZcBRL77
+					bhyG1LeOSglmu4DOtVLhaLijZr0d5ITMk6J5
+					iFd9mN2XktYGIWTri3sWMMxpW7QrT5LLg/E6
+					rrqR/S2bfKW+wsWYNceVSLdzIA9uBSLExREi
+					Y6JsurXsQklkwZV0XQ== )
+BUQN4SLRM2IOCDRCPII2FAVCBJKTH348.vic-menten.sasm.uclllabs.be. 86400 IN NSEC3 1 1 0 4BB0824C23F5B9ACDBF4A792833474F5C51A8C0D (
+					F1HALNHCAVMDI62DODTICSJHKL6MRO0H
+					A RRSIG )
+			86400	RRSIG	NSEC3 8 5 86400 (
+					20240919154917 20240820154917 55194 vic-menten.sasm.uclllabs.be.
+					W0G2wO5Xoppr9e2UF8TCAuPBLKFBmrwyUQrp
+					O8n7EjViJ6oawMf0y2bMJuaOBIotdeP0wfvr
+					xOabLj+ZtvJJkDFKhp8GD4efBMarZ7GEAf1D
+					jhsvtHZPHCLy70jrNwbVekXJex5oYSXcxQvn
+					RBPUpGO6oniyGf+njv5jCal0ATLFEikFcWmI
+					aHlOXmqzo4wzXMsjnM+WJ165c842/25CPGLr
+					FC2mkUQylcGnqmzzcEuy/5YE2U7IDejYgHRD
+					QBiB9rAZnPYDb7sgcUYX/cmUVAewOe1/hfTV
+					KVuplP2ecuPW/t1x8dJLB5Sd3sZjCm306LIz
+					i6obqVVGg6YIx+CMHg== )
+F1HALNHCAVMDI62DODTICSJHKL6MRO0H.vic-menten.sasm.uclllabs.be. 86400 IN NSEC3 1 1 0 4BB0824C23F5B9ACDBF4A792833474F5C51A8C0D (
+					HARC1LC48B0SL1NUI7NUANAP4A79QJP3
+					A RRSIG )
+			86400	RRSIG	NSEC3 8 5 86400 (
+					20240919154917 20240820154917 55194 vic-menten.sasm.uclllabs.be.
+					OlrAIgyuz+tsYBQDQfRF5OiEyLpeafcqa5xX
+					nx5dZ041NubNNccRRwt24kLP6+wnFkiCYRIk
+					hle/3fKGehEpcOenGxeUUymjpuTHutqNbDfM
+					uumDNUnrN78QtFMt6qCmgwuB6EFK0a0MsoDj
+					GOedkrWIdttlleNSHFJdfUV8kMXA8uPOypAF
+					ekyoKL6BWL0eFvH2tAgKGWQLJLNfjDebiJHF
+					c/SeuHxPtW3qULyM+vJlfXO4JLGGrxJQa25G
+					JUPNqVI93uEljGEYNu2Ib/hP7Or5OVHuG3qM
+					pk13qlTO6At2KU9imWutln7j6l4GAor/933Z
+					RY4nsyN9OX2yD6q0vA== )
+HARC1LC48B0SL1NUI7NUANAP4A79QJP3.vic-menten.sasm.uclllabs.be. 86400 IN NSEC3 1 1 0 4BB0824C23F5B9ACDBF4A792833474F5C51A8C0D (
+					JU5AAH4AIJ17KQ0P48UGCOI912KFK755
+					TXT RRSIG )
+			86400	RRSIG	NSEC3 8 5 86400 (
+					20240919154917 20240820154917 55194 vic-menten.sasm.uclllabs.be.
+					O7I0Jc9t0mS8f1TDNMuK4Wm56zbMNyq9iORM
+					JjpqJJek1Dd34xcYUKpnvYjZOzKfeuzAcmst
+					G4VE6RMfDumofpVOyWivR9MDcv6P2Jack5Lh
+					QQKNvU27ETNsd70d9RNWc5VOAOvL+Sos+da8
+					5iB1UfUWehB/Nn5hbwKdG2B3zKTJzyZQ9nC+
+					qwqe1QuRCzVcurRCN5Ltf3Wj85WL/1T8BcPm
+					oqG4KfiG5TjPtAufsRChJ6mtcyZFwvMLAag1
+					YE3/IhO1sfdKynmvcM2BEeHSHoOfaC9fHnUm
+					anuMHRl8qeZv+TdFmhx1oxJFhJhzwDAnmar8
+					qGl6CDa1Qv22jvG/hA== )
+JU5AAH4AIJ17KQ0P48UGCOI912KFK755.vic-menten.sasm.uclllabs.be. 86400 IN NSEC3 1 1 0 4BB0824C23F5B9ACDBF4A792833474F5C51A8C0D (
+					M96Q2L59HVIG8KJJ5ELN8HIM9QIG3MGR
+					A RRSIG )
+			86400	RRSIG	NSEC3 8 5 86400 (
+					20240919154917 20240820154917 55194 vic-menten.sasm.uclllabs.be.
+					m1/zZv3AmKWDWvF31oQpRdpLBhsBjCLTmdLw
+					GmcsIgXBFW7q0gTym3oTDgv4C2TzGpU39qiB
+					G0o70xBzshfaHaHyFbYBU6B4cCxsJ+nvkePD
+					zfH6G2bBBBb+mmWc9wVD+u9FTtQJoDjHd2fe
+					rI6n/Yv7lVwuXBJFlF8hKiRCZqc36sTVDbkU
+					uPN8WMRkjMuf9GTmEVcQbFTnPNGPdrhJ1gwI
+					6y070KwMbzxDdUjeFduGGXcLNxMri8GHZ11b
+					6LGnA/fjrh0sI9vW+hakYMuNFIXTXzb5dM+v
+					BH5mzdGYj6gkoZA6eTUub1h5I5n3GFpnZkGz
+					RQhyN7TSUI6yWNmVqw== )
+M96Q2L59HVIG8KJJ5ELN8HIM9QIG3MGR.vic-menten.sasm.uclllabs.be. 86400 IN NSEC3 1 1 0 4BB0824C23F5B9ACDBF4A792833474F5C51A8C0D (
+					PPBT8JNQ3QBFQDVPR9JMBHPJ96PGKNKU
+					A RRSIG )
+			86400	RRSIG	NSEC3 8 5 86400 (
+					20240919154917 20240820154917 55194 vic-menten.sasm.uclllabs.be.
+					WCrprkGMQWWIOQhn/im+wUBriEiXWDnxOcfM
+					C/ljF09RkJPSuu8wl0++PS4NSZzUhyaxDH6E
+					bydttRIBkrI/qFjb3tMmx3QaThQX7BG5A1vx
+					ZYm7ZETSP5zuk46rbo5dk/6MlpDOOZ4LrPLI
+					dc0ZrDKKj6po9fRnvh1hzIvZPkZBnNWCbfXV
+					6mjdGg9HMMi7IE0Ir6CokQIxZKKOes5rrBaw
+					VRdvTYwGvFUCGnPUKvkoY2UqH39IIoi0QZ4U
+					UnjhJQ24KUhFz+DasfGRqOn3ivZ7qZx5DDC0
+					KtjufYsX8YKNlBjncTWZllbtEphnx2s9Ata+
+					rdQ/yedtt4xMFTtMqA== )
+R95BO43G7L0EC3192EO1PI2VQNLGGLMH.vic-menten.sasm.uclllabs.be. 86400 IN NSEC3 1 1 0 4BB0824C23F5B9ACDBF4A792833474F5C51A8C0D (
+					RPOMEIM3588MVSVH5TRHT91JFD9GPVMA
+					AAAA RRSIG )
+			86400	RRSIG	NSEC3 8 5 86400 (
+					20240919154917 20240820154917 55194 vic-menten.sasm.uclllabs.be.
+					ldwQEucEawDsF/DNabp+YTv2U8ms83Vc3PME
+					yjBTZ+fNYfKoZ146dWI/U5iUWZ0nZoS5hl3m
+					+yJRBWoLtLvK9IMoTTm0YFJlK2AZb4J0ZGDY
+					dLyq1prVfkL+7ju2UKVLBkyEbpG29Yx4Lj8+
+					JeyqC6p+ENHqyI8nSvLWiUI0o7C9iYKa10V3
+					uWx3BF8lRVLQHh+dn4zN8S9O98ZrQfFH3NhK
+					7t/wlBOWNKWRXAgCAGgPo7QUTsaN/ZECaw4k
+					icHZ3WVQMPBpTQpBu98RB1VKbfaMOpuSkzNl
+					F5BwYMZAkt4qI6uCdXIimwdf8eE5O8HzXi79
+					TCvygWWZTMyhNq59Mw== )
+RPOMEIM3588MVSVH5TRHT91JFD9GPVMA.vic-menten.sasm.uclllabs.be. 86400 IN NSEC3 1 1 0 4BB0824C23F5B9ACDBF4A792833474F5C51A8C0D (
+					T2T5LITV78F6Q9FH71VA8HQC0EKLHF3F
+					TXT RRSIG )
+			86400	RRSIG	NSEC3 8 5 86400 (
+					20240919154917 20240820154917 55194 vic-menten.sasm.uclllabs.be.
+					aLFGZAmwUyLegW3hxWLC8ZnVD2m75keDtoYV
+					/v5Kgu8AyCYw8KTf2FMYcfPscnj9U48qjxga
+					qvTYWiHUWCyrXKK6uBHxHZioeusk/esqVNwW
+					Lp4px5s6cH4yrO95nbIwe7xald2maubULk4s
+					CRSRGDS5noVeyyIgyOJ/zHO/D1exzoGDWAuP
+					puJCBwN407J8rtd+EVieUFDCymQCtp1v07/b
+					YEz7hzxG2pKzyFejIWIL+cPtICgXMvXGbl7I
+					s0zH+W1HKLbfeBLvG90tHBROg1xNrINZKwQe
+					huOjzuROSfFlKH2U8VQEcowNd3Hg09Lcl2Ay
+					5UN2VqDm/uFO+PFSCg== )
+PPBT8JNQ3QBFQDVPR9JMBHPJ96PGKNKU.vic-menten.sasm.uclllabs.be. 86400 IN NSEC3 1 1 0 4BB0824C23F5B9ACDBF4A792833474F5C51A8C0D (
+					R95BO43G7L0EC3192EO1PI2VQNLGGLMH
+					A NS SOA MX AAAA RRSIG DNSKEY NSEC3PARAM )
+			86400	RRSIG	NSEC3 8 5 86400 (
+					20240919154917 20240820154917 55194 vic-menten.sasm.uclllabs.be.
+					Oj13VCQ0kQ+aFQb0zcxqwHox4FO6VZQPCbCM
+					CyV8+1IXzLXSd0oEyFAFY2xoJpemDA/fDbub
+					iyBbi9a5sholao3u7IH3Sy40ZhPq0b9oTOpJ
+					XruSGRHtR/IgOoDbfynpdIhrPgrF0liP1/KV
+					q+lF6IaO2kKrcvY02i7jgZR4tyOKFae1n9HZ
+					CmbyuYmbgkCPVBlNQYTnydPEvKoytrQD/Hdi
+					a8COaEUmnb7IPWGikIwcmAVEJEs4kFO9PFn2
+					yhbHV6B3denbMCuN3alOePKbgFM6VHjyWVMc
+					9PDxYygL1/M2eNXo3IAFiAbPwW1AbZWFnh0s
+					xwmG4TFQ5yY9c7HJGg== )
+T2T5LITV78F6Q9FH71VA8HQC0EKLHF3F.vic-menten.sasm.uclllabs.be. 86400 IN NSEC3 1 1 0 4BB0824C23F5B9ACDBF4A792833474F5C51A8C0D (
+					VBFESBRCV12EH6OL8CI9CNMESHIJJ971
+					TXT RRSIG )
+			86400	RRSIG	NSEC3 8 5 86400 (
+					20240919154917 20240820154917 55194 vic-menten.sasm.uclllabs.be.
+					cpdtahrlLZenOiAsFO5xLbA9CSqfdy4W+dVB
+					ZXGsbTL3MOzBhN0ju78YBLdmNu2fvNVFQXJ0
+					ZD+mISpJHDU+YZIX4d0ixPC65TezRvP38Ynk
+					sdF9Xyiml4AZr8bU/ZTz5r2dYrNVU6mHJ7Rl
+					Gh1wld+3++9HJ6u1QmAkmYjSnDy5XJvBeYxI
+					sNZM71e+R/ffyrxrKhpwDaNX26Qvy1aeuuJS
+					wO1RLHivtsVGkaJbvCaB/EzbNQv10l5Jy35Q
+					zhhdyHnOygwoCZJFt14jp7XFs3/Uu9HkTR/k
+					KqncavRFBx+98KQdm0GVl8Xq3/XRzCC5ZIDw
+					G4Np5lX2rr9yg9r3/w== )
+VBFESBRCV12EH6OL8CI9CNMESHIJJ971.vic-menten.sasm.uclllabs.be. 86400 IN NSEC3 1 1 0 4BB0824C23F5B9ACDBF4A792833474F5C51A8C0D (
+					VM78Q26HBT77E6HEL9EO87VU9CIDKB1V
+					A RRSIG )
+			86400	RRSIG	NSEC3 8 5 86400 (
+					20240919154917 20240820154917 55194 vic-menten.sasm.uclllabs.be.
+					NtbAz7gRpYRhvqcNdxuzlPEVvvg4e+lteveZ
+					IUN9eYvp9LtFC7BnY5r+eQf2RykgU42plVsQ
+					TTDTGhKa8mKJavb+XwxCECY78lG+MnKAPSZU
+					sxYjYtVL1okDyWaGMB+wAUs5x5+5HaHY4BGh
+					VB6yocJ/IrNBbtf6kyVQVZOX+7MqzUKYZ0F1
+					+xucRTrWqZ36lidsAEyG2q41U7JNrHypQiGx
+					uI9khgXPT8p3kjuVOUMj7x4O/MfaFK6XJFXU
+					yfGuIHCi6OBZWicAR2c8KB+cJKwLAgPVvg77
+					oHk7i929rCl0zirjpCtlNkvxoolp4uZthMuq
+					lP9+7UzY43JDCZjjPA== )
+VM78Q26HBT77E6HEL9EO87VU9CIDKB1V.vic-menten.sasm.uclllabs.be. 86400 IN NSEC3 1 1 0 4BB0824C23F5B9ACDBF4A792833474F5C51A8C0D (
+					1PI904HCOM9D1T583J207QD43Q77V3S6
+					A RRSIG )
+			86400	RRSIG	NSEC3 8 5 86400 (
+					20240919154917 20240820154917 55194 vic-menten.sasm.uclllabs.be.
+					D8MhjSz7GoctkGBOMeargQoJZUImTKZVVGLL
+					+NFaEf+3g0NYJ4njcQ4/OiTrgF/7Ic7dXuLP
+					ijb93ahCaW3WMiGMnq8o0ERBOqvCrHiBK5K0
+					P8LFErWZ70dxCLDf83L82agDSMi7dtGc6Eco
+					p3V6gCDLTlHQ039uqTDJGcOcryjhT8kKeei3
+					F0mR91coJ7xxeIhiY3itihP6HiazNpWli50O
+					8zYC+B7kyHgFurTqflqvnxLuwk48ezWVH44q
+					H0pPGSwjg2hfIdcHwphNNjXIMaWy49otaA4g
+					qLiQaU4lGmaN/crcCJ182voj+lUQsq06f2aj
+					/kbOS5MPw2iC+mGppQ== )
