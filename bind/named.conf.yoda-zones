@@ -1,0 +1,72 @@
+zone "foobar.vic-menten.sasm.uclllabs.be" {
+    type master;
+    file "/etc/bind/zones/db.foobar.vic-menten.sasm.uclllabs.be";
+};
+zone "foobar3.vic-menten.sasm.uclllabs.be" {
+    type master;
+    file "/etc/bind/zones/db.foobar3.vic-menten.sasm.uclllabs.be";
+};
+zone "subzoneauxeu5.vic-menten.sasm.uclllabs.be" {
+    type master;
+    file "/etc/bind/zones/db.subzoneauxeu5.vic-menten.sasm.uclllabs.be";
+};
+zone "subzonefie7oh.vic-menten.sasm.uclllabs.be" {
+    type master;
+    file "/etc/bind/zones/subzonefie7oh.vic-menten.sasm.uclllabs.be";
+};
+zone "subzonepua3pa.vic-menten.sasm.uclllabs.be" {
+    type master;
+    file "/etc/bind/zones/subzonepua3pa.vic-menten.sasm.uclllabs.be";
+};
+zone "subzoneyax2ee.vic-menten.sasm.uclllabs.be" {
+    type master;
+    file "/etc/bind/zones/subzoneyax2ee.vic-menten.sasm.uclllabs.be";
+};
+zone "subzoneugho6u.vic-menten.sasm.uclllabs.be" {
+    type master;
+    file "/etc/bind/zones/subzoneugho6u.vic-menten.sasm.uclllabs.be";
+};
+zone "subzonepat2ai.vic-menten.sasm.uclllabs.be" {
+    type master;
+    file "/etc/bind/zones/subzonepat2ai.vic-menten.sasm.uclllabs.be";
+};
+zone "subzoneapha0g.vic-menten.sasm.uclllabs.be" {
+    type master;
+    file "/etc/bind/zones/subzoneapha0g.vic-menten.sasm.uclllabs.be";
+};
+zone "subzonemohj5v.vic-menten.sasm.uclllabs.be" {
+    type master;
+    file "/etc/bind/zones/subzonemohj5v.vic-menten.sasm.uclllabs.be";
+};
+zone "subzonefou2ie.vic-menten.sasm.uclllabs.be" {
+    type master;
+    file "/etc/bind/zones/subzonefou2ie.vic-menten.sasm.uclllabs.be";
+};
+zone "subzoneoox3uz.vic-menten.sasm.uclllabs.be" {
+    type master;
+    file "/etc/bind/zones/subzoneoox3uz.vic-menten.sasm.uclllabs.be";
+};
+zone "subzoneoxaem3.vic-menten.sasm.uclllabs.be" {
+    type master;
+    file "/etc/bind/zones/subzoneoxaem3.vic-menten.sasm.uclllabs.be";
+};
+zone "subzonepue2ie.vic-menten.sasm.uclllabs.be" {
+    type master;
+    file "/etc/bind/zones/subzonepue2ie.vic-menten.sasm.uclllabs.be";
+};
+zone "subzoneada5ph.vic-menten.sasm.uclllabs.be" {
+    type master;
+    file "/etc/bind/zones/subzoneada5ph.vic-menten.sasm.uclllabs.be";
+};
+zone "subzonesaich2.vic-menten.sasm.uclllabs.be" {
+    type master;
+    file "/etc/bind/zones/subzonesaich2.vic-menten.sasm.uclllabs.be";
+};
+zone "subzoneeezoh0.vic-menten.sasm.uclllabs.be" {
+    type master;
+    file "/etc/bind/zones/subzoneeezoh0.vic-menten.sasm.uclllabs.be";
+};
+zone "subzonewi7hee.vic-menten.sasm.uclllabs.be" {
+    type master;
+    file "/etc/bind/zones/subzonewi7hee.vic-menten.sasm.uclllabs.be";
+};
