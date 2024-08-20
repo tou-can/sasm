@@ -1,55 +1,72 @@
 #!/bin/bash
 
-if [ "$(id -u)" != "0" ]; then
-    echo "This script must be run as root."
+ZONE_NAME=$1
+NAME_SERVER="ns.$ZONE_NAME.vic-menten.sasm.uclllabs.be"
+ZONE_FILE="/etc/bind/zones/$ZONE_NAME.vic-menten.sasm.uclllabs.be"
+MASTER_ZONE_FILE="/etc/bind/zones/db.vic-menten.sasm.uclllabs.be"
+
+if [ -z "$ZONE_NAME" ]; then
+    echo "Error: Zone name parameter is missing"
     exit 1
 fi
 
-if [ "$#" -ne 1 ]; then
-    echo "Usage: sudo dns_add_zone <zone>"
+serial=$(grep -oP "^\s*[0-9]+\s+;\s+Serial" "$MASTER_ZONE_FILE" | awk '{print $1}')
+
+if [ -z "$serial" ]; then
+    echo "Error: Serial number not found in $MASTER_ZONE_FILE"
     exit 1
 fi
 
-ZONE=$1
-ZONE_FILE="/etc/bind/zones/db.$ZONE.vic-menten.sasm.uclllabs.be"
-
-echo $ZONE
-echo $ZONE_FILE
-
-if [ -f "$ZONE_FILE" ]; then
-    echo "Zone file $ZONE_FILE already exists. Exiting."
-    exit 1
-fi
-
-echo "Adding zone $ZONE.vic-menten.sasm.uclllabs.be..."
-
-# Create the zone file
-cat <<EOL > $ZONE_FILE
-\$TTL    86400
-@       IN      SOA     ns.vic-menten.sasm.uclllabs.be. root.vic-menten.sasm.uclllabs.be. (
-                              2         ; Serial
-                         604800         ; Refresh
-                          86400         ; Retry
-                        2419200         ; Expire
-                         86400 )       ; Negative Cache TTL
-;
-@       IN      NS      ns.vic-menten.sasm.uclllabs.be.
-EOL
-
-echo "Zone file $ZONE_FILE created."
-
-# Check if the zone is already in the configuration file
-if ! grep -q "$ZONE.vic-menten.sasm.uclllabs.be" /etc/bind/named.conf.yoda-zones; then
-    echo "Adding zone configuration to /etc/bind/named.conf.yoda-zones..."
-    echo "zone \"$ZONE.vic-menten.sasm.uclllabs.be\" {" >> /etc/bind/named.conf.yoda-zones
-    echo "    type master;" >> /etc/bind/named.conf.yoda-zones
-    echo "    file \"$ZONE_FILE\";" >> /etc/bind/named.conf.yoda-zones
-    echo "};" >> /etc/bind/named.conf.yoda-zones
+new_serial=$((serial + 1))
+if sed -i "s/^\(\s*\)$serial/\1$new_serial/" "$MASTER_ZONE_FILE"; then
+    echo "Serial number updated in $MASTER_ZONE_FILE"
 else
-    echo "Zone $ZONE.vic-menten.sasm.uclllabs.be already exists in /etc/bind/named.conf.yoda-zones."
+    echo "Error: Failed to update serial number in $MASTER_ZONE_FILE"
+    exit 1
 fi
 
-# Reload bind to apply changes
-sudo systemctl reload bind9
+cat << EOF > "$ZONE_FILE"
+\$TTL 300
+@       IN      SOA     ns.vic-menten.sasm.uclllabs.be. root.vic-menten.sasm.uclllabs.be. (
+                        $new_serial    ; Serial
+                        300            ; Refresh
+                        300            ; Retry
+                        60800          ; Expire
+                        300     )      ; Negative Cache TTL
+;
 
-echo "Zone $ZONE.vic-menten.sasm.uclllabs.be added successfully."
+@       IN      NS      ns.vic-menten.sasm.uclllabs.be.
+ns      IN      A       193.191.176.91
+EOF
+
+if [ $? -ne 0 ]; then
+    echo "Failed to create zone file: $ZONE_FILE"
+    exit 1
+fi
+echo "Zone file created at $ZONE_FILE"
+
+echo "zone \"$ZONE_NAME.vic-menten.sasm.uclllabs.be\" {
+        type master;
+        notify yes;
+        file \"/etc/bind/zones/$ZONE_NAME.vic-menten.sasm.uclllabs.be\";
+};" >> /etc/bind/named.conf.yoda-zones
+
+echo "$ZONE_NAME        IN      NS      ns.vic-menten.sasm.uclllabs.be.
+ns.$ZONE_NAME   IN      A       193.191.176.91
+" >> "$MASTER_ZONE_FILE"
+
+if [ $? -ne 0 ]; then
+    echo "Error: Failed to add NS record to $MASTER_ZONE_FILE"
+    exit 1
+else
+    echo "NS record added to $MASTER_ZONE_FILE"
+fi
+
+systemctl restart bind9
+if [ $? -eq 0 ]; then
+    echo "Configuration applied and BIND service restarted"
+else
+    echo "Error: Failed to restart BIND service"
+    exit 1
+fi
+

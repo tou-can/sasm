@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# Parse command line options
 while getopts ":t:" opt; do
     case $opt in
         t)
@@ -17,19 +16,15 @@ while getopts ":t:" opt; do
     esac
 done
 
-# Set default record type to 'A' if not specified
 record_type="${record_type:-A}"
 
-# Shift processed options off the argument list
 shift $((OPTIND - 1))
 
-# Validate the record type
 if [[ "$record_type" != "A" && "$record_type" != "MX" && "$record_type" != "CNAME" ]]; then
     echo "Error: Record type must be A, MX, or CNAME." >&2
     exit 1
 fi
 
-# Parse remaining arguments based on record type
 case $record_type in
     CNAME)
         if [ "$#" -lt 2 ]; then
@@ -37,7 +32,7 @@ case $record_type in
             exit 1
         else
             subdomain="$1"
-            target_domain="$2"
+            domain_name="$2"
         fi
         ;;
     *)
@@ -52,16 +47,12 @@ case $record_type in
         ;;
 esac
 
-# Define the zone file path
-ZONE_FILE="/etc/bind/zones/db.$domain_name"
-
-# Check if the zone file exists
+ZONE_FILE="/etc/bind/zones/$domain_name"
 if [ ! -e "$ZONE_FILE" ]; then
     echo "Error: Zone file $ZONE_FILE not found." >&2
     exit 1
 fi
 
-# Get the current serial number and increment it
 current_serial=$(grep -oP "^\s*[0-9]+\s+;\s+Serial" "$ZONE_FILE" | awk '{print $1}')
 
 if [ -z "$current_serial" ]; then
@@ -71,7 +62,6 @@ fi
 
 new_serial=$((current_serial + 1))
 
-# Update the serial number in the zone file
 if sed -i "s/^\(\s*\)$current_serial/\1$new_serial/" "$ZONE_FILE"; then
     echo "Serial number incremented in $ZONE_FILE."
 else
@@ -79,21 +69,19 @@ else
     exit 1
 fi
 
-# Append the DNS record to the zone file
 case $record_type in
     A)
-        echo "$subdomain    IN    A    $ip_address" >> "$ZONE_FILE"
+        echo "$subdomain IN A $ip_address" >> "$ZONE_FILE"
         ;;
     MX)
-        echo "$domain_name    IN    MX    10    $subdomain" >> "$ZONE_FILE"
-        echo "$subdomain    IN    A    $ip_address" >> "$ZONE_FILE"
+        echo "$domain_name IN MX 10 $subdomain" >> "$ZONE_FILE"
+        echo "$subdomain IN A $ip_address" >> "$ZONE_FILE"
         ;;
     CNAME)
-        echo "$subdomain    IN    CNAME    $target_domain" >> "$ZONE_FILE"
+        echo "$subdomain IN CNAME ns" >> "$ZONE_FILE"
         ;;
 esac
 
-# Restart the BIND service to apply changes
 service bind9 restart
 echo "Record successfully added to $ZONE_FILE."
 

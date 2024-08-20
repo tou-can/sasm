@@ -1,49 +1,57 @@
 #!/bin/bash
 
-# Check if the script is run as root
-if [ "$EUID" -ne 0 ]; then
-    echo "This script must be run as root."
+if [ "$(whoami)" != "root" ]; then
+    echo "This script must be run as root via sudo."
     exit 1
 fi
 
-# Check if correct number of arguments is provided
-if [ "$#" -ne 1 ]; then
-    echo "Usage: $0 <domain>"
+if [ "$SUDO_USER" != "check" ]; then
+    echo "This script can only be executed by the 'check' user via sudo."
     exit 1
 fi
 
-# Set domain from command line argument
-domain="$1"
-document_root="/var/www/html/$domain"
-log_dir="/var/log/apache2/$domain"
-
-# Check if the domain already exists
-if [ -e "/etc/apache2/sites-available/$domain.conf" ]; then
-    echo "Error: Virtual host already exists for $domain."
+if [ -z "$1" ]; then
+    echo "Usage: sudo http_add_vhost <FQDN>"
     exit 1
 fi
 
-# Create DocumentRoot directory
-mkdir -p "$document_root"
-echo "welcome $domain" > "$document_root/index.html"
+FQDN=$1
+DOCROOT="/var/www/html/$FQDN"
+VHOST_CONF="/etc/apache2/sites-available/$FQDN.conf"
+LOGDIR="/var/log/apache2/$FQDN"
+INDEX_FILE="$DOCROOT/index.html"
 
-# Create Apache configuration file
-cat <<EOL > "/etc/apache2/sites-available/$domain.conf"
+if ! host "$FQDN" >/dev/null 2>&1; then
+    echo "Error: The domain $FQDN does not exist."
+    exit 1
+fi
+
+if [ ! -d "$DOCROOT" ]; then
+    mkdir -p "$DOCROOT"
+    echo "DocumentRoot created at $DOCROOT"
+fi
+
+if [ ! -d "$LOGDIR" ]; then
+    mkdir -p "$LOGDIR"
+    echo "Log directory created at $LOGDIR"
+fi
+
+cat <<EOF > "$VHOST_CONF"
 <VirtualHost *:80>
-    ServerAdmin webmaster@localhost
-    ServerName $domain
-    DocumentRoot $document_root
+    ServerName $FQDN
+    DocumentRoot $DOCROOT
 
-    ErrorLog $log_dir/error.log
-    CustomLog $log_dir/access.log combined
+    ErrorLog $LOGDIR/error.log
+    CustomLog $LOGDIR/access.log combined
 </VirtualHost>
-EOL
+EOF
 
-# Enable the virtual host
-a2ensite "$domain.conf"
+echo "Vhost configuration created at $VHOST_CONF"
 
-# Restart Apache
-systemctl restart apache2
+echo "welcome $FQDN" > "$INDEX_FILE"
+echo "Default index.html created at $INDEX_FILE"
 
-echo "Virtual host for $domain has been created successfully."
+a2ensite "$FQDN.conf"
+systemctl reload apache2
 
+echo "Vhost $FQDN enabled and Apache reloaded."
