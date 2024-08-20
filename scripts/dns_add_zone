@@ -11,7 +11,15 @@ if [ "$#" -ne 1 ]; then
 fi
 
 ZONE=$1
-ZONE_FILE="/etc/bind/zones/$ZONE.vic-menten.sasm.uclllabs.be"
+ZONE_FILE="/etc/bind/zones/db.$ZONE.vic-menten.sasm.uclllabs.be"
+
+echo $ZONE
+echo $ZONE_FILE
+
+if [ -f "$ZONE_FILE" ]; then
+    echo "Zone file $ZONE_FILE already exists. Exiting."
+    exit 1
+fi
 
 echo "Adding zone $ZONE.vic-menten.sasm.uclllabs.be..."
 
@@ -28,11 +36,18 @@ cat <<EOL > $ZONE_FILE
 @       IN      NS      ns.vic-menten.sasm.uclllabs.be.
 EOL
 
-# Add the zone to the named.conf.yoda-zones file
-echo "zone \"$ZONE.vic-menten.sasm.uclllabs.be\" {" >> /etc/bind/named.conf.yoda-zones
-echo "    type master;" >> /etc/bind/named.conf.yoda-zones
-echo "    file \"$ZONE_FILE\";" >> /etc/bind/named.conf.yoda-zones
-echo "};" >> /etc/bind/named.conf.yoda-zones
+echo "Zone file $ZONE_FILE created."
+
+# Check if the zone is already in the configuration file
+if ! grep -q "$ZONE.vic-menten.sasm.uclllabs.be" /etc/bind/named.conf.yoda-zones; then
+    echo "Adding zone configuration to /etc/bind/named.conf.yoda-zones..."
+    echo "zone \"$ZONE.vic-menten.sasm.uclllabs.be\" {" >> /etc/bind/named.conf.yoda-zones
+    echo "    type master;" >> /etc/bind/named.conf.yoda-zones
+    echo "    file \"$ZONE_FILE\";" >> /etc/bind/named.conf.yoda-zones
+    echo "};" >> /etc/bind/named.conf.yoda-zones
+else
+    echo "Zone $ZONE.vic-menten.sasm.uclllabs.be already exists in /etc/bind/named.conf.yoda-zones."
+fi
 
 # Reload bind to apply changes
 sudo systemctl reload bind9

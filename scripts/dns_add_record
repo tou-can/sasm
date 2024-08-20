@@ -1,56 +1,99 @@
 #!/bin/bash
 
-if [ "$(id -u)" != "0" ]; then
-    echo "This script must be run as root."
+# Parse command line options
+while getopts ":t:" opt; do
+    case $opt in
+        t)
+            record_type="$OPTARG"
+            ;;
+        \?)
+            echo "Invalid option: -$OPTARG. Only -t is allowed." >&2
+            exit 1
+            ;;
+        :)
+            echo "Option -$OPTARG requires an argument." >&2
+            exit 1
+            ;;
+    esac
+done
+
+# Set default record type to 'A' if not specified
+record_type="${record_type:-A}"
+
+# Shift processed options off the argument list
+shift $((OPTIND - 1))
+
+# Validate the record type
+if [[ "$record_type" != "A" && "$record_type" != "MX" && "$record_type" != "CNAME" ]]; then
+    echo "Error: Record type must be A, MX, or CNAME." >&2
     exit 1
 fi
 
-if [ "$#" -lt 3 ]; then
-    echo "Usage: sudo dns_add_record -t <type> <name> <data> <zone>"
-    exit 1
-fi
-
-RECORD_TYPE="A"
-if [ "$1" == "-t" ]; then
-    RECORD_TYPE=$2
-    shift 2
-fi
-
-NAME=$1
-DATA=$2
-ZONE=$3
-ZONE_FILE="/etc/bind/zones/$ZONE"
-
-echo "ZONE: $ZONE"
-echo "NAME: $NAME"
-echo "DATA: $DATA"
-echo "Constructed ZONE_FILE path: $ZONE_FILE"
-
-if [ ! -f "$ZONE_FILE" ]; then
-    echo "Zone file $ZONE_FILE not found!"
-    exit 1
-fi
-
-echo "Adding $RECORD_TYPE record for $NAME.$ZONE..."
-
-case $RECORD_TYPE in
-    A)
-        echo "$NAME    IN    A    $DATA" >> $ZONE_FILE
-        ;;
+# Parse remaining arguments based on record type
+case $record_type in
     CNAME)
-        echo "$NAME    IN    CNAME    $DATA" >> $ZONE_FILE
-        ;;
-    MX)
-        echo "$NAME    IN    MX    10    $DATA" >> $ZONE_FILE
-        echo "$NAME    IN    A    $DATA" >> $ZONE_FILE
+        if [ "$#" -lt 2 ]; then
+            echo "Usage: sudo dns_add_record -t <record_type> <subdomain> <domain>" >&2
+            exit 1
+        else
+            subdomain="$1"
+            target_domain="$2"
+        fi
         ;;
     *)
-        echo "Unsupported record type: $RECORD_TYPE"
-        exit 1
+        if [ "$#" -lt 3 ]; then
+            echo "Usage: sudo dns_add_record -t <record_type> <subdomain> <ip_address> <domain>" >&2
+            exit 1
+        else
+            subdomain="$1"
+            ip_address="$2"
+            domain_name="$3"
+        fi
         ;;
 esac
 
-# Reload bind to apply changes
-sudo systemctl reload bind9
+# Define the zone file path
+ZONE_FILE="/etc/bind/zones/db.$domain_name"
 
-echo "$RECORD_TYPE record added to $ZONE successfully."
+# Check if the zone file exists
+if [ ! -e "$ZONE_FILE" ]; then
+    echo "Error: Zone file $ZONE_FILE not found." >&2
+    exit 1
+fi
+
+# Get the current serial number and increment it
+current_serial=$(grep -oP "^\s*[0-9]+\s+;\s+Serial" "$ZONE_FILE" | awk '{print $1}')
+
+if [ -z "$current_serial" ]; then
+    echo "Error: Serial number not found in $ZONE_FILE." >&2
+    exit 1
+fi
+
+new_serial=$((current_serial + 1))
+
+# Update the serial number in the zone file
+if sed -i "s/^\(\s*\)$current_serial/\1$new_serial/" "$ZONE_FILE"; then
+    echo "Serial number incremented in $ZONE_FILE."
+else
+    echo "Error: Failed to update the serial number in $ZONE_FILE." >&2
+    exit 1
+fi
+
+# Append the DNS record to the zone file
+case $record_type in
+    A)
+        echo "$subdomain    IN    A    $ip_address" >> "$ZONE_FILE"
+        ;;
+    MX)
+        echo "$domain_name    IN    MX    10    $subdomain" >> "$ZONE_FILE"
+        echo "$subdomain    IN    A    $ip_address" >> "$ZONE_FILE"
+        ;;
+    CNAME)
+        echo "$subdomain    IN    CNAME    $target_domain" >> "$ZONE_FILE"
+        ;;
+esac
+
+# Restart the BIND service to apply changes
+service bind9 restart
+echo "Record successfully added to $ZONE_FILE."
+
