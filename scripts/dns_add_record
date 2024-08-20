@@ -1,45 +1,56 @@
 #!/bin/bash
-if [ "$EUID" -ne 0 ]; then
-  echo "Error: This script must be run as root."
-  exit
+
+if [ "$(id -u)" != "0" ]; then
+    echo "This script must be run as root."
+    exit 1
 fi
 
-if [ "$#" -ne 4 ]; then
-  echo "Usage: $0 -t <record_type> <record_name> <record_value> <zone_name>"
-  exit
+if [ "$#" -lt 3 ]; then
+    echo "Usage: sudo dns_add_record -t <type> <name> <data> <zone>"
+    exit 1
 fi
 
-while getopts ":t:" opt; do
-  case ${opt} in
-    t )
-      record_type="$OPTARG"
-      ;;
-    \? )
-      echo "Invalid option: -$OPTARG" 1>&2
-      exit 1
-      ;;
-    : )
-      echo "Option -$OPTARG requires an argument." 1>&2
-      exit 1
-      ;;
-  esac
-done
-shift $((OPTIND -1))
-
-record_name="$1"
-record_value="$2"
-zone_name="$3"
-zone_file="/etc/bind/zones/db.${zone_name}"
-
-# Check if the zone exists
-if [ ! -f "${zone_file}" ]; then
-  echo "Error: Zone '${zone_name}' does not exist."
-  exit
+RECORD_TYPE="A"
+if [ "$1" == "-t" ]; then
+    RECORD_TYPE=$2
+    shift 2
 fi
 
-# Add the record to the zone file
-echo "${record_name}       IN      ${record_type}      ${record_value}" | sudo tee -a "${zone_file}" > /dev/null
+NAME=$1
+DATA=$2
+ZONE=$3
+ZONE_FILE="/etc/bind/zones/$ZONE"
 
-# Notify the user
-echo "Record added successfully to zone '${zone_name}':"
-echo "${record_name}       IN      ${record_type}      ${record_value}"
+echo "ZONE: $ZONE"
+echo "NAME: $NAME"
+echo "DATA: $DATA"
+echo "Constructed ZONE_FILE path: $ZONE_FILE"
+
+if [ ! -f "$ZONE_FILE" ]; then
+    echo "Zone file $ZONE_FILE not found!"
+    exit 1
+fi
+
+echo "Adding $RECORD_TYPE record for $NAME.$ZONE..."
+
+case $RECORD_TYPE in
+    A)
+        echo "$NAME    IN    A    $DATA" >> $ZONE_FILE
+        ;;
+    CNAME)
+        echo "$NAME    IN    CNAME    $DATA" >> $ZONE_FILE
+        ;;
+    MX)
+        echo "$NAME    IN    MX    10    $DATA" >> $ZONE_FILE
+        echo "$NAME    IN    A    $DATA" >> $ZONE_FILE
+        ;;
+    *)
+        echo "Unsupported record type: $RECORD_TYPE"
+        exit 1
+        ;;
+esac
+
+# Reload bind to apply changes
+sudo systemctl reload bind9
+
+echo "$RECORD_TYPE record added to $ZONE successfully."

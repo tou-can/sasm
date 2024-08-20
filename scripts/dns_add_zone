@@ -1,44 +1,40 @@
 #!/bin/bash
-if [ "$EUID" -ne 0 ]
-then
-  echo "Error: This script must be run as root."
-  exit
-fi
 
-# Add your script logic here
-#!/bin/bash
-if [ "$EUID" -ne 0 ]; then
-  echo "Error: This script must be run as root."
-  exit
+if [ "$(id -u)" != "0" ]; then
+    echo "This script must be run as root."
+    exit 1
 fi
 
 if [ "$#" -ne 1 ]; then
-  echo "Usage: $0 <zone_name>"
-  exit
+    echo "Usage: sudo dns_add_zone <zone>"
+    exit 1
 fi
 
-zone_name="$1"
-zone_file="/etc/bind/zones/db.${zone_name}"
+ZONE=$1
+ZONE_FILE="/etc/bind/zones/$ZONE.vic-menten.sasm.uclllabs.be"
 
-# Check if the zone already exists
-if [ -f "${zone_file}" ]; then
-  echo "Error: Zone '${zone_name}' already exists."
-  exit
-fi
+echo "Adding zone $ZONE.vic-menten.sasm.uclllabs.be..."
 
 # Create the zone file
-echo "\$TTL 604800
-@       IN      SOA     ns.${zone_name}. admin.vic-menten.sasm.uclllabs.be. (
-                             $(date +%Y%m%d%H%M) ; Serial
-                             604800         ; Refresh
-                             86400          ; Retry
-                             2419200        ; Expire
-                             604800 )       ; Negative Cache TTL
+cat <<EOL > $ZONE_FILE
+\$TTL    86400
+@       IN      SOA     ns.vic-menten.sasm.uclllabs.be. root.vic-menten.sasm.uclllabs.be. (
+                              2         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         86400 )       ; Negative Cache TTL
+;
+@       IN      NS      ns.vic-menten.sasm.uclllabs.be.
+EOL
 
-@       IN      NS      ns.${zone_name}.
-@       IN      NS      ns1.uclllabs.be.
-@       IN      NS      ns2.uclllabs.be.
-@       IN      NS      ns.vic-menten.sasm.uclllabs.be." | sudo tee "${zone_file}" > /dev/null
+# Add the zone to the named.conf.yoda-zones file
+echo "zone \"$ZONE.vic-menten.sasm.uclllabs.be\" {" >> /etc/bind/named.conf.yoda-zones
+echo "    type master;" >> /etc/bind/named.conf.yoda-zones
+echo "    file \"$ZONE_FILE\";" >> /etc/bind/named.conf.yoda-zones
+echo "};" >> /etc/bind/named.conf.yoda-zones
 
-# Notify the user
-echo "Zone '${zone_name}' created successfully at '${zone_file}'."
+# Reload bind to apply changes
+sudo systemctl reload bind9
+
+echo "Zone $ZONE.vic-menten.sasm.uclllabs.be added successfully."

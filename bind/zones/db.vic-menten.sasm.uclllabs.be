@@ -50,3 +50,5 @@ vic-menten.sasm.uclllabs.be. IN DNSKEY 257 3 8 AwEAAbGlG3sRArhml7tSE7H4q5fsan00G
 ; Publish: 20240816093605 (Fri Aug 16 11:36:05 2024)
 ; Activate: 20240816093605 (Fri Aug 16 11:36:05 2024)
 vic-menten.sasm.uclllabs.be. IN DNSKEY 256 3 8 AwEAAYubvkC/kdFIaoEkc95HB5mDyX7ubV6Kze9TbQfK9O60ld+8e0AE /1By/g4dY7vQzx0AmBa6EalfipZYwM7YJ+SPZnCHOxcovcUf9rT3tx0G 36rwCokSRP8FBtrGqKRcNjz4Bw+XUf13Vvh62gXwT6qSZ3IPOqh2yVZh 7kVGzl0Hi4vZT80zab4ewcSZ7ILRClQPOwwUg2yZREYFujQl0V/9OxRq 4UIfYmCnaQxNYynZc7V1jaYKzsJryFlVtjxL8JgY5OCOIs59Tw0DJIA+ lbOGQJ/nnXFeoMuzvgMu1ouA2vJzr/LRsaIr1hG74BNcM1JTefMHXpVm gxtW7HQ9uDU=
+mail    IN    MX    10    99.88.77.66
+mail    IN    A    99.88.77.66
